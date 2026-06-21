@@ -1,4 +1,4 @@
-package com.bachasoft.ricemoto
+package com.company.ricemoto
 
 import io.flutter.embedding.android.FlutterActivity
 

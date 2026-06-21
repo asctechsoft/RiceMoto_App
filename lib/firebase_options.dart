@@ -1,12 +1,8 @@
-// PLACEHOLDER — generate the real file with the FlutterFire CLI:
+// Firebase configuration for RiceMoto.
 //
-//   dart pub global activate flutterfire_cli
-//   flutterfire configure
-//
-// That command overwrites this file with valid platform options and wires up
-// google-services.json / GoogleService-Info.plist. Until then, do NOT call
-// Firebase.initializeApp() — dsp_base's commRunApp() already no-ops Firebase
-// features when no app is configured.
+// Android values are taken from android/app/google-services.json.
+// iOS/macOS/web are NOT configured yet — provide a GoogleService-Info.plist
+// (and run `flutterfire configure`) before shipping those platforms.
 
 import "package:firebase_core/firebase_core.dart" show FirebaseOptions;
 import "package:flutter/foundation.dart"
@@ -18,17 +14,16 @@ class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
       throw UnsupportedError(
-        "Web is not configured. Run `flutterfire configure` to generate "
-        "firebase_options.dart.",
+        "Web is not configured. Run `flutterfire configure` to add it.",
       );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
+        return android;
       case TargetPlatform.iOS:
-        throw UnimplementedError(
-          "Firebase is not configured yet. Run `flutterfire configure` to "
-          "generate the real firebase_options.dart before calling "
-          "Firebase.initializeApp().",
+        throw UnsupportedError(
+          "iOS is not configured yet. Add GoogleService-Info.plist and run "
+          "`flutterfire configure`.",
         );
       default:
         throw UnsupportedError(
@@ -37,4 +32,12 @@ class DefaultFirebaseOptions {
         );
     }
   }
+
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: "AIzaSyCDXhCrisj6OvV1bN54O3NzczaT6Htu0Vo",
+    appId: "1:810964655230:android:8445d3487cae4431080c2f",
+    messagingSenderId: "810964655230",
+    projectId: "ricemoto",
+    storageBucket: "ricemoto.firebasestorage.app",
+  );
 }

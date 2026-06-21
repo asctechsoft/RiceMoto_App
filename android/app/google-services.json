@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "810964655230",
+    "project_id": "ricemoto",
+    "storage_bucket": "ricemoto.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810964655230:android:8445d3487cae4431080c2f",
+        "android_client_info": {
+          "package_name": "com.company.ricemoto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDXhCrisj6OvV1bN54O3NzczaT6Htu0Vo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

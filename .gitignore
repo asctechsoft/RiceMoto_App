@@ -3,6 +3,9 @@
 *.log
 *.pyc
 *.swp
+
+# Secrets / Firebase (keep out of version control)
+android/debug_keystore.properties
 .DS_Store
 .atom/
 .build/
