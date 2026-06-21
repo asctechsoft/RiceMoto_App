@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RiceMoto</string>
+
+    <!-- Onboarding -->
+    <string name="onboard_title_1">Scan receipts in a snap</string>
+    <string name="onboard_desc_1">Point your camera at any receipt and let RiceMoto capture every detail automatically.</string>
+    <string name="onboard_title_2">Track every expense</string>
+    <string name="onboard_desc_2">All your spending, neatly organized by category, date and merchant.</string>
+    <string name="onboard_title_3">Smarter money reports</string>
+    <string name="onboard_desc_3">Beautiful charts and insights help you understand where your money goes.</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="get_started">Get started</string>
+
+    <!-- Register -->
+    <string name="create_account">Create account</string>
+    <string name="register_subtitle">Sign up to start tracking your expenses.</string>
+    <string name="full_name">Full name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone number</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="sign_in">Sign in</string>
+
+    <!-- Tabs -->
+    <string name="tab_home">Home</string>
+    <string name="tab_history">History</string>
+    <string name="tab_scan">Scan</string>
+    <string name="tab_reports">Reports</string>
+    <string name="tab_settings">Settings</string>
+
+    <!-- Home -->
+    <string name="greeting">Hello, %1$s</string>
+    <string name="total_spending">Total spending</string>
+    <string name="recent_transactions">Recent transactions</string>
+    <string name="see_all">See all</string>
+</resources>
