@@ -6,6 +6,10 @@
 
 # Secrets / Firebase (keep out of version control)
 android/debug_keystore.properties
+
+# Android build artifacts
+android/build/
+android/.gradle/
 .DS_Store
 .atom/
 .build/
