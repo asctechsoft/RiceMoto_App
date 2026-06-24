@@ -11,23 +11,16 @@ class SplashScreen extends GetView<SplashController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primary,
+      backgroundColor: AppColors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Container(
-              width: 96.w,
-              height: 96.w,
-              decoration: const BoxDecoration(
-                color: AppColors.white,
-                shape: BoxShape.circle,
-              ),
-              child: Icon(
-                Icons.document_scanner_rounded,
-                size: 48.w,
-                color: AppColors.primary,
-              ),
+            Image.asset(
+              "assets/logo/logo.png",
+              width: 120.w,
+              height: 120.w,
+              fit: BoxFit.contain,
             ),
             SizedBox(height: 20.h),
             Text(
@@ -35,7 +28,7 @@ class SplashScreen extends GetView<SplashController> {
               style: TextStyle(
                 fontSize: 28.sp,
                 fontWeight: FontWeight.w800,
-                color: AppColors.white,
+                color: AppColors.primary,
                 letterSpacing: 0.5,
               ),
             ),
@@ -45,7 +38,7 @@ class SplashScreen extends GetView<SplashController> {
               height: 26.w,
               child: const CircularProgressIndicator(
                 strokeWidth: 2.6,
-                valueColor: AlwaysStoppedAnimation<Color>(AppColors.white),
+                valueColor: AlwaysStoppedAnimation<Color>(AppColors.primary),
               ),
             ),
           ],
