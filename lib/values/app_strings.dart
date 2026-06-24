@@ -14,6 +14,8 @@ class AppStrings {
   static const String onboardDesc2 = "onboard_desc_2";
   static const String onboardTitle3 = "onboard_title_3";
   static const String onboardDesc3 = "onboard_desc_3";
+  static const String onboardTitle4 = "onboard_title_4";
+  static const String onboardDesc4 = "onboard_desc_4";
   static const String skip = "skip";
   static const String next = "next";
   static const String getStarted = "get_started";

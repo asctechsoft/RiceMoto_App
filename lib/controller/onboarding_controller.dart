@@ -1,4 +1,4 @@
-import "package:flutter/widgets.dart";
+import "package:flutter/material.dart";
 import "package:get/get.dart";
 import "package:ricemoto/configs/app_routes.dart";
 import "package:ricemoto/models/onboarding_item.dart";
@@ -6,26 +6,34 @@ import "package:ricemoto/services/storage_service.dart";
 import "package:ricemoto/values/app_assets.dart";
 import "package:ricemoto/values/app_strings.dart";
 
-/// Drives the 3-step onboarding pager.
 class OnboardingController extends GetxController {
   final PageController pageController = PageController();
   final RxInt currentPage = 0.obs;
 
   final List<OnboardingItem> pages = const <OnboardingItem>[
     OnboardingItem(
+      image: AppAssets.onboard4,
+      titleKey: AppStrings.onboardTitle4,
+      descKey: AppStrings.onboardDesc4,
+      icon: Icons.motorcycle,
+    ),
+    OnboardingItem(
       image: AppAssets.onboard1,
       titleKey: AppStrings.onboardTitle1,
       descKey: AppStrings.onboardDesc1,
+      icon: Icons.document_scanner_outlined,
     ),
     OnboardingItem(
       image: AppAssets.onboard2,
       titleKey: AppStrings.onboardTitle2,
       descKey: AppStrings.onboardDesc2,
+      icon: Icons.account_balance_wallet_outlined,
     ),
     OnboardingItem(
       image: AppAssets.onboard3,
       titleKey: AppStrings.onboardTitle3,
       descKey: AppStrings.onboardDesc3,
+      icon: Icons.bar_chart_rounded,
     ),
   ];
 
