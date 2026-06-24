@@ -8,6 +8,7 @@ class AppAssets {
   static const String onboard1 = "$_images/onboard_1.png";
   static const String onboard2 = "$_images/onboard_2.png";
   static const String onboard3 = "$_images/onboard_3.png";
+  static const String onboard4 = "$_images/onboard_4.png";
 
   static const String logo = "$_images/logo.png";
 }

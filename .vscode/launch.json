@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Alpha (debug)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug",
+            "args": ["--flavor", "alpha"]
+        },
+        {
+            "name": "Test (debug)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug",
+            "args": ["--flavor", "dev"]
+        },
+        {
+            "name": "Release (product)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "args": ["--flavor", "product"]
+        },
+        {
+            "name": "dsp_base",
+            "cwd": "dsp_base",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}
