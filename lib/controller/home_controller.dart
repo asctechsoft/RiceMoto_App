@@ -37,6 +37,12 @@ class HomeController extends GetxController {
 
   void goToRegister() => Get.toNamed(AppRoutes.register);
 
+  /// Opens the detail screen for the current vehicle (no-op if none set up).
+  void goToVehicleDetail() {
+    if (vehicle == null) return;
+    Get.toNamed(AppRoutes.vehicleDetail);
+  }
+
   /// Opens the "add a receipt" source picker.
   void onScanPressed() {
     Get.bottomSheet(

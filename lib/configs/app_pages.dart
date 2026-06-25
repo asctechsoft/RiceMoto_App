@@ -1,18 +1,21 @@
 import "package:get/get.dart";
 import "package:ricemoto/configs/app_routes.dart";
 import "package:ricemoto/controller/camera_scan_controller.dart";
+import "package:ricemoto/controller/history_controller.dart";
 import "package:ricemoto/controller/home_controller.dart";
 import "package:ricemoto/controller/login_controller.dart";
 import "package:ricemoto/controller/onboarding_controller.dart";
 import "package:ricemoto/controller/register_controller.dart";
 import "package:ricemoto/controller/splash_controller.dart";
 import "package:ricemoto/controller/vehicle_setup_controller.dart";
+import "package:ricemoto/presentation/history/history_search_screen.dart";
 import "package:ricemoto/presentation/home/home_screen.dart";
 import "package:ricemoto/presentation/login/login_screen.dart";
 import "package:ricemoto/presentation/onboarding/onboarding_screen.dart";
 import "package:ricemoto/presentation/register/register_screen.dart";
 import "package:ricemoto/presentation/scan/camera_scan_screen.dart";
 import "package:ricemoto/presentation/splash/splash_screen.dart";
+import "package:ricemoto/presentation/vehicle/vehicle_detail_screen.dart";
 import "package:ricemoto/presentation/vehicle/vehicle_setup_screen.dart";
 import "package:ricemoto/presentation/welcome/welcome_screen.dart";
 import "package:ricemoto/repository/auth_repository.dart";
@@ -76,6 +79,7 @@ class AppPages {
       page: () => const HomeScreen(),
       binding: BindingsBuilder(() {
         Get.lazyPut<HomeController>(HomeController.new);
+        Get.lazyPut<HistoryController>(HistoryController.new);
       }),
     ),
     GetPage<dynamic>(
@@ -83,6 +87,20 @@ class AppPages {
       page: () => const CameraScanScreen(),
       binding: BindingsBuilder(() {
         Get.lazyPut<CameraScanController>(CameraScanController.new);
+      }),
+    ),
+    GetPage<dynamic>(
+      name: AppRoutes.vehicleDetail,
+      page: () => const VehicleDetailScreen(),
+    ),
+    GetPage<dynamic>(
+      name: AppRoutes.historySearch,
+      page: () => const HistorySearchScreen(),
+      binding: BindingsBuilder(() {
+        // Normally already alive behind the History tab; guard for deep links.
+        if (!Get.isRegistered<HistoryController>()) {
+          Get.lazyPut<HistoryController>(HistoryController.new);
+        }
       }),
     ),
   ];

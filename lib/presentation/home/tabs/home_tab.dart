@@ -156,85 +156,88 @@ class _VehicleCard extends StatelessWidget {
         ? controller.vehicle!.plate
         : (controller.vehicle?.name ?? "");
 
-    return Container(
-      padding: EdgeInsets.all(16.w),
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: <Color>[AppColors.primaryLight, AppColors.primaryDark],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(20.r),
-      ),
-      child: Row(
-        children: <Widget>[
-          Container(
-            width: 56.w,
-            height: 56.w,
-            decoration: BoxDecoration(
-              color: AppColors.white.withValues(alpha: 0.16),
-              borderRadius: BorderRadius.circular(14.r),
-            ),
-            child: Icon(Icons.two_wheeler_rounded,
-                size: 30.w, color: AppColors.white),
+    return GestureDetector(
+      onTap: controller.goToVehicleDetail,
+      child: Container(
+        padding: EdgeInsets.all(16.w),
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: <Color>[AppColors.primaryLight, AppColors.primaryDark],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
-          SizedBox(width: 14.w),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Row(
-                  children: <Widget>[
-                    Text(
-                      AppStrings.myVehicle.tr,
-                      style: AppTextStyles.title.copyWith(
-                        color: AppColors.white,
-                        fontWeight: FontWeight.w700,
+          borderRadius: BorderRadius.circular(20.r),
+        ),
+        child: Row(
+          children: <Widget>[
+            Container(
+              width: 56.w,
+              height: 56.w,
+              decoration: BoxDecoration(
+                color: AppColors.white.withValues(alpha: 0.16),
+                borderRadius: BorderRadius.circular(14.r),
+              ),
+              child: Icon(Icons.two_wheeler_rounded,
+                  size: 30.w, color: AppColors.white),
+            ),
+            SizedBox(width: 14.w),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Text(
+                        AppStrings.myVehicle.tr,
+                        style: AppTextStyles.title.copyWith(
+                          color: AppColors.white,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      const Spacer(),
+                      if (controller.isGuest) const _GuestBadge(),
+                    ],
+                  ),
+                  if (plate.isNotEmpty) ...<Widget>[
+                    SizedBox(height: 8.h),
+                    Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 10.w, vertical: 4.h),
+                      decoration: BoxDecoration(
+                        color: AppColors.white.withValues(alpha: 0.18),
+                        borderRadius: BorderRadius.circular(8.r),
+                      ),
+                      child: Text(
+                        plate,
+                        style: AppTextStyles.body.copyWith(
+                          color: AppColors.white,
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.5,
+                        ),
                       ),
                     ),
-                    const Spacer(),
-                    if (controller.isGuest) const _GuestBadge(),
                   ],
-                ),
-                if (plate.isNotEmpty) ...<Widget>[
                   SizedBox(height: 8.h),
-                  Container(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 10.w, vertical: 4.h),
-                    decoration: BoxDecoration(
-                      color: AppColors.white.withValues(alpha: 0.18),
-                      borderRadius: BorderRadius.circular(8.r),
-                    ),
-                    child: Text(
-                      plate,
-                      style: AppTextStyles.body.copyWith(
-                        color: AppColors.white,
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: 0.5,
+                  Row(
+                    children: <Widget>[
+                      Icon(Icons.check_circle_rounded,
+                          size: 14.w, color: AppColors.white),
+                      SizedBox(width: 4.w),
+                      Text(
+                        AppStrings.vehicleActive.tr,
+                        style: AppTextStyles.caption.copyWith(
+                          color: AppColors.white70,
+                        ),
                       ),
-                    ),
+                    ],
                   ),
                 ],
-                SizedBox(height: 8.h),
-                Row(
-                  children: <Widget>[
-                    Icon(Icons.check_circle_rounded,
-                        size: 14.w, color: AppColors.white),
-                    SizedBox(width: 4.w),
-                    Text(
-                      AppStrings.vehicleActive.tr,
-                      style: AppTextStyles.caption.copyWith(
-                        color: AppColors.white70,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
+              ),
             ),
-          ),
-          Icon(Icons.chevron_right_rounded,
-              size: 24.w, color: AppColors.white70),
-        ],
+            Icon(Icons.chevron_right_rounded,
+                size: 24.w, color: AppColors.white70),
+          ],
+        ),
       ),
     );
   }
@@ -274,7 +277,8 @@ class _TotalCostCard extends StatelessWidget {
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(20.r),
         boxShadow: const <BoxShadow>[
-          BoxShadow(color: AppColors.shadow, blurRadius: 12, offset: Offset(0, 3)),
+          BoxShadow(
+              color: AppColors.shadow, blurRadius: 12, offset: Offset(0, 3)),
         ],
       ),
       child: Column(
@@ -284,8 +288,8 @@ class _TotalCostCard extends StatelessWidget {
             children: <Widget>[
               Text(
                 AppStrings.totalCostMonth.tr,
-                style: AppTextStyles.body
-                    .copyWith(color: AppColors.textSecondary),
+                style:
+                    AppTextStyles.body.copyWith(color: AppColors.textSecondary),
               ),
               SizedBox(width: 4.w),
               Icon(Icons.info_outline_rounded,

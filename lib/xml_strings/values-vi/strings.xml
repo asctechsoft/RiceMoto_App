@@ -62,12 +62,59 @@
     <string name="enter_app">Vào app ngay</string>
     <string name="add_info_later">Bạn có thể bổ sung thêm thông tin sau</string>
 
+    <!-- Vehicle detail -->
+    <string name="update_km">Cập nhật km</string>
+    <string name="vehicle_tab_info">Thông tin</string>
+    <string name="vehicle_tab_history">Lịch sử</string>
+    <string name="vehicle_tab_supplies">Vật tư</string>
+    <string name="vehicle_tab_reminders">Nhắc nhở</string>
+    <string name="vehicle_tab_members">Thành viên</string>
+    <string name="vehicle_field_brand">Hãng</string>
+    <string name="vehicle_field_model">Model</string>
+    <string name="vehicle_field_year">Năm</string>
+    <string name="vehicle_field_color">Màu</string>
+    <string name="vehicle_field_current_km">Km hiện tại</string>
+    <string name="vehicle_field_purchase_date">Ngày mua</string>
+    <string name="vehicle_stat_total_spending">Tổng chi</string>
+    <string name="vehicle_stat_fuel_count">Số lần đổ xăng</string>
+    <string name="vehicle_stat_km_per_liter">km/lít</string>
+
     <!-- Tabs -->
     <string name="tab_home">Trang chủ</string>
     <string name="tab_history">Lịch sử</string>
     <string name="tab_scan">Ghi chi phí</string>
     <string name="tab_reports">Báo cáo</string>
     <string name="tab_account">Tài khoản</string>
+
+    <!-- History -->
+    <string name="hist_section_month">Tháng @month · @year</string>
+    <string name="hist_today">Hôm nay</string>
+    <string name="hist_filter_all">Tất cả</string>
+    <string name="hist_filter_fuel">Xăng</string>
+    <string name="hist_filter_supplies">Vật tư</string>
+    <string name="hist_filter_repair">Sửa chữa</string>
+    <string name="hist_filter_admin">Hành chính</string>
+    <string name="hist_filter_other">Khác</string>
+
+    <!-- History - search -->
+    <string name="hist_search_hint">Tìm tên trạm, loại chi phí…</string>
+    <string name="hist_recent_searches">Tìm kiếm gần đây</string>
+    <string name="hist_clear_all">Xóa tất cả</string>
+    <string name="hist_no_results">Không tìm thấy kết quả</string>
+
+    <!-- History - filter sheet -->
+    <string name="hist_filter_title">Bộ lọc</string>
+    <string name="hist_filter_vehicle">Chọn xe</string>
+    <string name="hist_filter_all_vehicles">Tất cả xe</string>
+    <string name="hist_filter_date_range">Khoảng thời gian</string>
+    <string name="hist_filter_expense_type">Loại chi phí</string>
+    <string name="hist_filter_type_hint">Chọn một hoặc nhiều loại</string>
+    <string name="hist_filter_sort">Sắp xếp theo</string>
+    <string name="hist_sort_newest">Mới nhất</string>
+    <string name="hist_sort_oldest">Cũ nhất</string>
+    <string name="hist_sort_highest">Cao nhất</string>
+    <string name="hist_reset">Đặt lại</string>
+    <string name="hist_apply">Áp dụng</string>
 
     <!-- Home -->
     <string name="greeting">Xin chào, %1$s</string>
@@ -106,6 +153,10 @@
     <string name="scan_receipt_hint">Căn hóa đơn vào trong khung</string>
     <string name="scan_receipt_subhint">AI sẽ tự động quét và trích xuất thông tin chi phí.</string>
     <string name="camera_error">Không thể mở camera</string>
+
+    <!-- AI processing (after capture, before result) -->
+    <string name="processing_title">Đang xử lý…</string>
+    <string name="processing_subtitle">AI đang đọc hóa đơn của bạn</string>
 
     <!-- Receipt review -->
     <string name="ai_scan_result">Kết quả quét AI</string>

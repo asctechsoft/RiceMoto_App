@@ -10,4 +10,6 @@ class AppRoutes {
   static const String vehicleSetup = "/vehicle-setup";
   static const String home = "/home";
   static const String cameraScan = "/camera-scan";
+  static const String vehicleDetail = "/vehicle-detail";
+  static const String historySearch = "/history-search";
 }

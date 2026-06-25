@@ -14,6 +14,15 @@ class CameraScanController extends GetxController {
   final RxBool torchOn = false.obs;
   final RxBool isCapturing = false.obs;
 
+  /// True while the AI-processing screen is shown (after capture, before the
+  /// review sheet). The captured photo path drives its preview.
+  final RxBool isProcessing = false.obs;
+  final RxString processingImagePath = "".obs;
+
+  /// How long the AI-processing screen stays up before the result sheet.
+  /// TODO: drive this off the real OCR/AI call instead of a fixed delay.
+  static const Duration _processingDuration = Duration(milliseconds: 2500);
+
   @override
   void onInit() {
     super.onInit();
@@ -60,12 +69,21 @@ class CameraScanController extends GetxController {
     try {
       final XFile shot = await c.takePicture();
       await c.pausePreview();
-      _showReview(shot.path);
+      await _runProcessing(shot.path);
     } on CameraException {
       hasError.value = true;
     } finally {
       isCapturing.value = false;
     }
+  }
+
+  /// Shows the AI-processing screen, simulates the read, then opens the review.
+  Future<void> _runProcessing(String imagePath) async {
+    processingImagePath.value = imagePath;
+    isProcessing.value = true;
+    await Future<void>.delayed(_processingDuration);
+    isProcessing.value = false;
+    _showReview(imagePath);
   }
 
   void _showReview(String imagePath) {

@@ -3,6 +3,7 @@ import "package:flutter/material.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:get/get.dart";
 import "package:ricemoto/controller/camera_scan_controller.dart";
+import "package:ricemoto/presentation/scan/receipt_processing_view.dart";
 import "package:ricemoto/values/app_strings.dart";
 
 /// Bright accent used for the scanning frame corners.
@@ -19,6 +20,11 @@ class CameraScanScreen extends GetView<CameraScanController> {
       body: Obx(() {
         if (controller.hasError.value) {
           return _ErrorView(onClose: controller.close);
+        }
+        if (controller.isProcessing.value) {
+          return ReceiptProcessingView(
+            imagePath: controller.processingImagePath.value,
+          );
         }
         if (!controller.isReady.value) {
           return const Center(

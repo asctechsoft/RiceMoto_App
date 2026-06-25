@@ -62,12 +62,59 @@
     <string name="enter_app">Enter the app</string>
     <string name="add_info_later">You can add more details later</string>
 
+    <!-- Vehicle detail -->
+    <string name="update_km">Update km</string>
+    <string name="vehicle_tab_info">Info</string>
+    <string name="vehicle_tab_history">History</string>
+    <string name="vehicle_tab_supplies">Supplies</string>
+    <string name="vehicle_tab_reminders">Reminders</string>
+    <string name="vehicle_tab_members">Members</string>
+    <string name="vehicle_field_brand">Brand</string>
+    <string name="vehicle_field_model">Model</string>
+    <string name="vehicle_field_year">Year</string>
+    <string name="vehicle_field_color">Color</string>
+    <string name="vehicle_field_current_km">Current km</string>
+    <string name="vehicle_field_purchase_date">Purchase date</string>
+    <string name="vehicle_stat_total_spending">Total spending</string>
+    <string name="vehicle_stat_fuel_count">Refuels</string>
+    <string name="vehicle_stat_km_per_liter">km/L</string>
+
     <!-- Tabs -->
     <string name="tab_home">Home</string>
     <string name="tab_history">History</string>
     <string name="tab_scan">Add</string>
     <string name="tab_reports">Reports</string>
     <string name="tab_account">Account</string>
+
+    <!-- History -->
+    <string name="hist_section_month">@month/@year</string>
+    <string name="hist_today">Today</string>
+    <string name="hist_filter_all">All</string>
+    <string name="hist_filter_fuel">Fuel</string>
+    <string name="hist_filter_supplies">Supplies</string>
+    <string name="hist_filter_repair">Repair</string>
+    <string name="hist_filter_admin">Admin</string>
+    <string name="hist_filter_other">Other</string>
+
+    <!-- History - search -->
+    <string name="hist_search_hint">Search station, expense type…</string>
+    <string name="hist_recent_searches">Recent searches</string>
+    <string name="hist_clear_all">Clear all</string>
+    <string name="hist_no_results">No results found</string>
+
+    <!-- History - filter sheet -->
+    <string name="hist_filter_title">Filter</string>
+    <string name="hist_filter_vehicle">Vehicle</string>
+    <string name="hist_filter_all_vehicles">All vehicles</string>
+    <string name="hist_filter_date_range">Date range</string>
+    <string name="hist_filter_expense_type">Expense type</string>
+    <string name="hist_filter_type_hint">Select one or more types</string>
+    <string name="hist_filter_sort">Sort by</string>
+    <string name="hist_sort_newest">Newest</string>
+    <string name="hist_sort_oldest">Oldest</string>
+    <string name="hist_sort_highest">Highest</string>
+    <string name="hist_reset">Reset</string>
+    <string name="hist_apply">Apply</string>
 
     <!-- Home -->
     <string name="greeting">Hello, %1$s</string>
@@ -106,6 +153,10 @@
     <string name="scan_receipt_hint">Align the fuel receipt inside the frame</string>
     <string name="scan_receipt_subhint">AI will scan and extract expense details automatically.</string>
     <string name="camera_error">Unable to open the camera</string>
+
+    <!-- AI processing (after capture, before result) -->
+    <string name="processing_title">Processing…</string>
+    <string name="processing_subtitle">AI is reading your receipt</string>
 
     <!-- Receipt review -->
     <string name="ai_scan_result">AI Scan Result</string>
