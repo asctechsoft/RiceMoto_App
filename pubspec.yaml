@@ -29,6 +29,12 @@ dependencies:
   # SVG / vector icons
   flutter_svg: ^2.2.3
 
+  # Runtime permissions (camera / photo library for receipt capture)
+  permission_handler: ^12.0.1
+
+  # Live camera preview for the receipt scanner
+  camera: ^0.11.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

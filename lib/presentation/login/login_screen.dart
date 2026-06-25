@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:get/get.dart";
-import "package:ricemoto/controller/register_controller.dart";
+import "package:ricemoto/controller/login_controller.dart";
 import "package:ricemoto/presentation/widgets/auth_card.dart";
 import "package:ricemoto/presentation/widgets/google_button.dart";
 import "package:ricemoto/presentation/widgets/illustration_frame.dart";
@@ -13,8 +13,8 @@ import "package:ricemoto/values/app_colors.dart";
 import "package:ricemoto/values/app_strings.dart";
 import "package:ricemoto/values/app_text_styles.dart";
 
-class RegisterScreen extends GetView<RegisterController> {
-  const RegisterScreen({super.key});
+class LoginScreen extends GetView<LoginController> {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +26,9 @@ class RegisterScreen extends GetView<RegisterController> {
         leading: BackButton(color: AppColors.primary, onPressed: Get.back),
         actions: <Widget>[
           TextButton(
-            onPressed: controller.goToLogin,
+            onPressed: controller.goToRegister,
             child: Text(
-              AppStrings.signIn.tr,
+              AppStrings.createAccount.tr,
               style: AppTextStyles.body.copyWith(
                 color: AppColors.primary,
                 fontWeight: FontWeight.w700,
@@ -51,7 +51,7 @@ class RegisterScreen extends GetView<RegisterController> {
               ),
               SizedBox(height: 16.h),
               Text(
-                AppStrings.createAccount.tr,
+                AppStrings.login.tr,
                 style: AppTextStyles.heading.copyWith(
                   fontSize: 26.sp,
                   fontWeight: FontWeight.w800,
@@ -59,7 +59,7 @@ class RegisterScreen extends GetView<RegisterController> {
               ),
               SizedBox(height: 6.h),
               Text(
-                AppStrings.registerSubtitle.tr,
+                AppStrings.loginSubtitle.tr,
                 textAlign: TextAlign.center,
                 style: AppTextStyles.body.copyWith(
                   color: AppColors.textSecondary,
@@ -78,27 +78,36 @@ class RegisterScreen extends GetView<RegisterController> {
               SizedBox(height: 20.h),
               Obx(
                 () => PrimaryButton(
-                  label: AppStrings.createAccount.tr,
+                  label: AppStrings.login.tr,
                   isLoading: controller.isLoading.value,
                   onPressed: controller.submit,
                 ),
               ),
               SizedBox(height: 12.h),
-              _TermsRow(controller: controller),
-              SizedBox(height: 16.h),
+              TextButton(
+                onPressed: controller.forgotPassword,
+                child: Text(
+                  AppStrings.forgotPassword.tr,
+                  style: AppTextStyles.body.copyWith(
+                    color: AppColors.primary,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+              SizedBox(height: 4.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    AppStrings.alreadyHaveAccount.tr,
+                    AppStrings.noAccountYet.tr,
                     style: AppTextStyles.body.copyWith(
                       color: AppColors.textSecondary,
                     ),
                   ),
                   TextButton(
-                    onPressed: controller.goToLogin,
+                    onPressed: controller.goToRegister,
                     child: Text(
-                      AppStrings.signIn.tr,
+                      AppStrings.createNow.tr,
                       style: AppTextStyles.body.copyWith(
                         color: AppColors.primary,
                         fontWeight: FontWeight.w700,
@@ -110,58 +119,6 @@ class RegisterScreen extends GetView<RegisterController> {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class _TermsRow extends StatelessWidget {
-  const _TermsRow({required this.controller});
-
-  final RegisterController controller;
-
-  @override
-  Widget build(BuildContext context) {
-    final TextStyle link = AppTextStyles.caption.copyWith(
-      color: AppColors.primary,
-      fontWeight: FontWeight.w600,
-    );
-    return Obx(
-      () => Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          SizedBox(
-            width: 24.w,
-            height: 24.w,
-            child: Checkbox(
-              value: controller.agreeToTerms.value,
-              onChanged: (_) => controller.toggleAgree(),
-              activeColor: AppColors.primary,
-              visualDensity: VisualDensity.compact,
-              materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(4.r),
-              ),
-            ),
-          ),
-          SizedBox(width: 10.w),
-          Expanded(
-            child: GestureDetector(
-              onTap: controller.toggleAgree,
-              child: Text.rich(
-                TextSpan(
-                  style: AppTextStyles.caption,
-                  children: <InlineSpan>[
-                    TextSpan(text: AppStrings.agreePrefix.tr),
-                    TextSpan(text: AppStrings.termsOfService.tr, style: link),
-                    TextSpan(text: AppStrings.agreeMiddle.tr),
-                    TextSpan(text: AppStrings.privacyPolicy.tr, style: link),
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ],
       ),
     );
   }

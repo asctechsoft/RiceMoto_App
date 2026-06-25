@@ -18,11 +18,11 @@ class SplashScreen extends GetView<SplashController> {
           children: <Widget>[
             Image.asset(
               "assets/logo/logo.png",
-              width: 120.w,
-              height: 120.w,
+              width: 120,
+              height: 120,
               fit: BoxFit.contain,
             ),
-            SizedBox(height: 20.h),
+            SizedBox(height: 20),
             Text(
               AppConfig.appName,
               style: TextStyle(

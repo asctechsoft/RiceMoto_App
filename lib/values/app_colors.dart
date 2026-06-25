@@ -27,6 +27,10 @@ class AppColors {
   static const Color error = Color(0xFFE53935);
   static const Color success = Color(0xFF2E7D32);
 
+  // Guest-mode banner (amber)
+  static const Color guestBanner = Color(0xFFF5C84A);
+  static const Color guestBannerText = Color(0xFF5A4500);
+
   // Misc
   static const Color shadow = Color(0x1A000000);
   static const Color white = Color(0xFFFFFFFF);

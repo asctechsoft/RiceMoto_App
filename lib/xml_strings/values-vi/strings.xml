@@ -3,21 +3,31 @@
     <string name="app_name">RiceMoto</string>
 
     <!-- Onboarding -->
-    <string name="onboard_title_1">Quét hóa đơn trong tích tắc</string>
-    <string name="onboard_desc_1">Hướng camera vào hóa đơn bất kỳ, RiceMoto tự động nhận diện mọi thông tin.</string>
-    <string name="onboard_title_2">Theo dõi mọi chi tiêu</string>
-    <string name="onboard_desc_2">Toàn bộ chi tiêu được sắp xếp gọn gàng theo danh mục, ngày và cửa hàng.</string>
-    <string name="onboard_title_3">Báo cáo tài chính thông minh</string>
-    <string name="onboard_desc_3">Biểu đồ trực quan giúp bạn hiểu rõ tiền của mình đi đâu.</string>
-    <string name="onboard_title_4">Chào mừng đến RiceMoto</string>
-    <string name="onboard_desc_4">Trợ lý thông minh giúp bạn theo dõi chi phí xe máy và quản lý hóa đơn dễ dàng.</string>
+    <string name="onboard_title_1">Theo dõi mọi chi phí thông minh</string>
+    <string name="onboard_desc_1">Quét hóa đơn xăng, sắp xếp chi tiêu và kiểm soát toàn bộ chi phí xe máy của bạn.</string>
+    <string name="onboard_title_2">Biết rõ từng đồng chi phí</string>
+    <string name="onboard_desc_2">Thống kê xăng, sửa chữa, vật tư theo tháng và năm rõ ràng minh bạch.</string>
+    <string name="onboard_title_3">Không bao giờ quên bảo dưỡng</string>
+    <string name="onboard_desc_3">Nhắc thay nhớt theo km, đăng kiểm và bảo hiểm đúng hạn tự động.</string>
     <string name="skip">Bỏ qua</string>
     <string name="next">Tiếp tục</string>
-    <string name="get_started">Bắt đầu</string>
+    <string name="get_started">Bắt đầu ngay</string>
+    <string name="illustration_placeholder">Hình minh hoạ</string>
 
-    <!-- Register -->
+    <!-- Welcome -->
+    <string name="welcome_title">Bắt đầu như thế nào?</string>
+    <string name="welcome_subtitle">Tạo tài khoản để lưu dữ liệu vĩnh viễn, hoặc dùng thử trước không cần đăng ký.</string>
+    <string name="try_without_account">Dùng thử không cần tài khoản →</string>
+    <string name="guest_data_note">Dữ liệu chỉ lưu trên máy này</string>
+    <string name="create_account_later_note">Bạn có thể tạo tài khoản sau bất kỳ lúc nào</string>
+
+    <!-- Auth - shared -->
+    <string name="or_divider">hoặc</string>
+    <string name="continue_with_google">Tiếp tục với Google</string>
+
+    <!-- Register / Create account -->
     <string name="create_account">Tạo tài khoản</string>
-    <string name="register_subtitle">Đăng ký để bắt đầu quản lý chi tiêu.</string>
+    <string name="register_subtitle">Theo dõi mọi chi phí xe máy của bạn.</string>
     <string name="full_name">Họ và tên</string>
     <string name="email">Email</string>
     <string name="phone">Số điện thoại</string>
@@ -25,17 +35,89 @@
     <string name="register">Đăng ký</string>
     <string name="already_have_account">Đã có tài khoản?</string>
     <string name="sign_in">Đăng nhập</string>
+    <string name="agree_prefix">Tôi đồng ý với </string>
+    <string name="terms_of_service">Điều khoản</string>
+    <string name="agree_middle"> và </string>
+    <string name="privacy_policy">Chính sách bảo mật</string>
+
+    <!-- Login -->
+    <string name="login">Đăng nhập</string>
+    <string name="login_subtitle">Chào mừng trở lại!</string>
+    <string name="forgot_password">Quên mật khẩu?</string>
+    <string name="no_account_yet">Chưa có tài khoản?</string>
+    <string name="create_now">Tạo ngay</string>
+
+    <!-- Vehicle setup -->
+    <string name="add_vehicle_title">Thêm xe của bạn</string>
+    <string name="add_vehicle_subtitle">Chỉ cần vài thông tin cơ bản để bắt đầu theo dõi chi phí.</string>
+    <string name="vehicle_name">Tên xe</string>
+    <string name="vehicle_name_hint">VD: Wave Alpha của tao</string>
+    <string name="vehicle_brand">Hãng xe</string>
+    <string name="brand_other">Khác</string>
+    <string name="current_km">Số km hiện tại</string>
+    <string name="current_km_hint">12.000</string>
+    <string name="km_unit">km</string>
+    <string name="license_plate">Biển số (không bắt buộc)</string>
+    <string name="license_plate_hint">29B1-xxxxx</string>
+    <string name="enter_app">Vào app ngay</string>
+    <string name="add_info_later">Bạn có thể bổ sung thêm thông tin sau</string>
 
     <!-- Tabs -->
     <string name="tab_home">Trang chủ</string>
     <string name="tab_history">Lịch sử</string>
-    <string name="tab_scan">Quét</string>
+    <string name="tab_scan">Ghi chi phí</string>
     <string name="tab_reports">Báo cáo</string>
-    <string name="tab_settings">Cài đặt</string>
+    <string name="tab_account">Tài khoản</string>
 
     <!-- Home -->
     <string name="greeting">Xin chào, %1$s</string>
     <string name="total_spending">Tổng chi tiêu</string>
     <string name="recent_transactions">Giao dịch gần đây</string>
     <string name="see_all">Xem tất cả</string>
+    <string name="month_year">Tháng @month, @year</string>
+    <string name="guest_banner">Chế độ khách — dữ liệu chỉ lưu trên máy</string>
+    <string name="my_vehicle">Xe của tôi</string>
+    <string name="guest_badge">Khách</string>
+    <string name="vehicle_active">Đang hoạt động</string>
+    <string name="total_cost_month">Tổng chi phí trong tháng</string>
+    <string name="cat_fuel">Xăng</string>
+    <string name="cat_repair">Sửa</string>
+    <string name="cat_oil">Nhớt</string>
+    <string name="no_data_title">Chưa có dữ liệu</string>
+    <string name="no_data_subtitle">Bắt đầu ghi chi phí đầu tiên</string>
+    <string name="record_now">Ghi ngay</string>
+    <string name="currency_unit">đ</string>
+
+    <!-- Add-receipt sheet & permissions -->
+    <string name="add_receipt_title">Thêm hóa đơn</string>
+    <string name="add_receipt_subtitle">Chọn cách thêm chi phí của bạn</string>
+    <string name="capture_receipt">Chụp hóa đơn</string>
+    <string name="capture_receipt_desc">Dùng camera để chụp hóa đơn</string>
+    <string name="choose_from_gallery">Chọn từ thư viện</string>
+    <string name="choose_from_gallery_desc">Chọn ảnh có sẵn trong máy</string>
+    <string name="cancel">Hủy</string>
+    <string name="permission_needed_title">Cần cấp quyền</string>
+    <string name="permission_denied">Cần cấp quyền để tiếp tục.</string>
+    <string name="permission_permanently_denied">Hãy cấp quyền trong Cài đặt để dùng tính năng này.</string>
+    <string name="open_settings">Mở Cài đặt</string>
+    <string name="feature_coming_soon">Tính năng đang được phát triển.</string>
+
+    <!-- Camera scan -->
+    <string name="scan_receipt_hint">Căn hóa đơn vào trong khung</string>
+    <string name="scan_receipt_subhint">AI sẽ tự động quét và trích xuất thông tin chi phí.</string>
+    <string name="camera_error">Không thể mở camera</string>
+
+    <!-- Receipt review -->
+    <string name="ai_scan_result">Kết quả quét AI</string>
+    <string name="review_title">Kiểm tra thông tin</string>
+    <string name="review_subtitle">Bạn có thể sửa bất kỳ thông tin nào trước khi lưu.</string>
+    <string name="field_station_name">Tên cây xăng</string>
+    <string name="field_fuel_type">Loại xăng</string>
+    <string name="field_liters">Số lít</string>
+    <string name="field_unit_price">Đơn giá</string>
+    <string name="field_total_amount">Thành tiền</string>
+    <string name="scanned_at">Đã quét lúc @time ngày @date</string>
+    <string name="rescan">Quét lại</string>
+    <string name="save">Lưu</string>
+    <string name="expense_saved">Đã lưu chi phí</string>
 </resources>

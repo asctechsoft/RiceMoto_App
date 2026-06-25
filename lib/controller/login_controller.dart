@@ -4,20 +4,17 @@ import "package:ricemoto/configs/app_routes.dart";
 import "package:ricemoto/repository/auth_repository.dart";
 import "package:ricemoto/values/app_strings.dart";
 
-/// State + actions for the phone-based "Create account" screen.
-class RegisterController extends GetxController {
-  RegisterController(this._authRepository);
+/// State + actions for the phone-based "Sign in" screen.
+class LoginController extends GetxController {
+  LoginController(this._authRepository);
 
   final AuthRepository _authRepository;
 
   final TextEditingController phoneCtrl = TextEditingController();
 
   final RxBool isLoading = false.obs;
-  final RxBool agreeToTerms = false.obs;
 
   static const String dialCode = "+84";
-
-  void toggleAgree() => agreeToTerms.toggle();
 
   bool get _isPhoneValid => phoneCtrl.text.trim().length >= 9;
 
@@ -26,11 +23,7 @@ class RegisterController extends GetxController {
       _toast(AppStrings.phone.tr);
       return;
     }
-    if (!agreeToTerms.value) {
-      _toast(AppStrings.agreePrefix.tr);
-      return;
-    }
-    await _run(() => _authRepository.registerWithPhone(
+    await _run(() => _authRepository.loginWithPhone(
           phone: "$dialCode${phoneCtrl.text.trim()}",
         ));
   }
@@ -38,8 +31,11 @@ class RegisterController extends GetxController {
   Future<void> continueWithGoogle() =>
       _run(_authRepository.continueWithGoogle);
 
-  /// Switch to the login screen (replaces this one in the stack).
-  void goToLogin() => Get.offNamed(AppRoutes.login);
+  // TODO: wire a password-recovery flow once the backend exists.
+  void forgotPassword() => _toast(AppStrings.forgotPassword.tr);
+
+  /// Switch to the create-account screen (replaces this one in the stack).
+  void goToRegister() => Get.offNamed(AppRoutes.register);
 
   Future<void> _run(Future<void> Function() action) async {
     isLoading.value = true;
@@ -52,7 +48,7 @@ class RegisterController extends GetxController {
   }
 
   void _toast(String message) => Get.snackbar(
-        AppStrings.createAccount.tr,
+        AppStrings.login.tr,
         message,
         snackPosition: SnackPosition.BOTTOM,
       );

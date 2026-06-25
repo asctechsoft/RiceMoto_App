@@ -14,10 +14,10 @@ class SplashController extends GetxController {
   Future<void> _bootstrap() async {
     await Future<void>.delayed(AppConfig.splashDuration);
 
-    if (StorageService.isLoggedIn) {
+    if (StorageService.isLoggedIn || StorageService.hasVehicle) {
       Get.offAllNamed(AppRoutes.home);
     } else if (StorageService.onboardingSeen) {
-      Get.offAllNamed(AppRoutes.register);
+      Get.offAllNamed(AppRoutes.welcome);
     } else {
       Get.offAllNamed(AppRoutes.onboarding);
     }

@@ -33,7 +33,7 @@ class HomeBottomBar extends StatelessWidget {
               _NavItem(controller: controller, index: 1, icon: Icons.access_time_rounded, labelKey: AppStrings.tabHistory),
               _ScanButton(onPressed: controller.onScanPressed),
               _NavItem(controller: controller, index: 2, icon: Icons.bar_chart_rounded, labelKey: AppStrings.tabReports),
-              _NavItem(controller: controller, index: 3, icon: Icons.settings_rounded, labelKey: AppStrings.tabSettings),
+              _NavItem(controller: controller, index: 3, icon: Icons.person_outline_rounded, labelKey: AppStrings.tabAccount),
             ],
           ),
         ),

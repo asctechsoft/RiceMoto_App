@@ -12,28 +12,22 @@ class OnboardingController extends GetxController {
 
   final List<OnboardingItem> pages = const <OnboardingItem>[
     OnboardingItem(
-      image: AppAssets.onboard4,
-      titleKey: AppStrings.onboardTitle4,
-      descKey: AppStrings.onboardDesc4,
-      icon: Icons.motorcycle,
-    ),
-    OnboardingItem(
       image: AppAssets.onboard1,
       titleKey: AppStrings.onboardTitle1,
       descKey: AppStrings.onboardDesc1,
-      icon: Icons.document_scanner_outlined,
+      icon: Icons.receipt_long_outlined,
     ),
     OnboardingItem(
       image: AppAssets.onboard2,
       titleKey: AppStrings.onboardTitle2,
       descKey: AppStrings.onboardDesc2,
-      icon: Icons.account_balance_wallet_outlined,
+      icon: Icons.insights_rounded,
     ),
     OnboardingItem(
       image: AppAssets.onboard3,
       titleKey: AppStrings.onboardTitle3,
       descKey: AppStrings.onboardDesc3,
-      icon: Icons.bar_chart_rounded,
+      icon: Icons.notifications_active_outlined,
     ),
   ];
 
@@ -56,7 +50,7 @@ class OnboardingController extends GetxController {
 
   Future<void> _finish() async {
     await StorageService.setOnboardingSeen(true);
-    Get.offAllNamed(AppRoutes.register);
+    Get.offAllNamed(AppRoutes.welcome);
   }
 
   @override

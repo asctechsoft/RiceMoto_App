@@ -1,19 +1,33 @@
 import "package:ricemoto/models/user_model.dart";
 import "package:ricemoto/services/storage_service.dart";
 
-/// Handles authentication concerns. Currently a local stub — swap the
-/// body of [register] for a real API/Firebase call when the backend is ready.
+/// Handles authentication concerns. Currently a local stub — swap the bodies
+/// for real API/Firebase calls when the backend is ready.
 class AuthRepository {
-  Future<UserModel> register({
-    required String fullName,
-    required String email,
-    required String phone,
-    required String password,
-  }) async {
+  /// Create a new account with a phone number.
+  Future<UserModel> registerWithPhone({required String phone}) async {
     // Simulate a network round-trip.
     await Future<void>.delayed(const Duration(milliseconds: 800));
 
-    final user = UserModel(fullName: fullName, email: email, phone: phone);
+    final user = UserModel(fullName: "", email: "", phone: phone);
+    await StorageService.setLoggedIn(true);
+    return user;
+  }
+
+  /// Sign in an existing account with a phone number.
+  Future<UserModel> loginWithPhone({required String phone}) async {
+    await Future<void>.delayed(const Duration(milliseconds: 800));
+
+    final user = UserModel(fullName: "", email: "", phone: phone);
+    await StorageService.setLoggedIn(true);
+    return user;
+  }
+
+  /// Sign in / sign up with Google.
+  Future<UserModel> continueWithGoogle() async {
+    await Future<void>.delayed(const Duration(milliseconds: 800));
+
+    final user = const UserModel(fullName: "", email: "");
     await StorageService.setLoggedIn(true);
     return user;
   }

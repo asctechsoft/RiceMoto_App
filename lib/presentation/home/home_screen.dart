@@ -16,7 +16,7 @@ class HomeScreen extends GetView<HomeController> {
       const HomeTab(),
       PlaceholderTab(title: AppStrings.tabHistory.tr, icon: Icons.access_time_rounded),
       PlaceholderTab(title: AppStrings.tabReports.tr, icon: Icons.bar_chart_rounded),
-      PlaceholderTab(title: AppStrings.tabSettings.tr, icon: Icons.settings_rounded),
+      PlaceholderTab(title: AppStrings.tabAccount.tr, icon: Icons.person_outline_rounded),
     ];
 
     return Scaffold(
