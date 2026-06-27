@@ -140,6 +140,156 @@ class AppStrings {
   static const String recordNow = "record_now";
   static const String currencyUnit = "currency_unit";
 
+  // Reports
+  static const String rptPeriodMonth = "rpt_period_month";
+  static const String rptPeriodQuarter = "rpt_period_quarter";
+  static const String rptPeriodYear = "rpt_period_year";
+  static const String rptPeriodCustom = "rpt_period_custom";
+  static const String rptTotalMonth = "rpt_total_month";
+  static const String rptTotalQuarter = "rpt_total_quarter";
+  static const String rptTotalYear = "rpt_total_year";
+  static const String rptTotalCustom = "rpt_total_custom";
+  static const String rptCompareMonth = "rpt_compare_month";
+  static const String rptCompareQuarter = "rpt_compare_quarter";
+  static const String rptCompareYear = "rpt_compare_year";
+  static const String rptCompareCustom = "rpt_compare_custom";
+  static const String rptQuarterMonths = "rpt_quarter_months";
+  static const String rptMonthShort = "rpt_month_short";
+  static const String rptChartByWeek = "rpt_chart_by_week";
+  static const String rptChartByMonth = "rpt_chart_by_month";
+  static const String rptChartCompareMonths = "rpt_chart_compare_months";
+  static const String rptChartByQuarter = "rpt_chart_by_quarter";
+  static const String rptChartByPeriod = "rpt_chart_by_period";
+  static const String rptFrom = "rpt_from";
+  static const String rptTo = "rpt_to";
+  static const String rptViewReport = "rpt_view_report";
+  static const String rptPreset7d = "rpt_preset_7d";
+  static const String rptPreset30d = "rpt_preset_30d";
+  static const String rptPreset3m = "rpt_preset_3m";
+  static const String rptPreset6m = "rpt_preset_6m";
+  static const String rptPreset1y = "rpt_preset_1y";
+  static const String rptDonutTotal = "rpt_donut_total";
+  static const String rptEfficiencyUnit = "rpt_efficiency_unit";
+  static const String rptTopTitle = "rpt_top_title";
+  static const String rptInsightPeakTitle = "rpt_insight_peak_title";
+  static const String rptInsightPeakSub = "rpt_insight_peak_sub";
+  static const String rptCustomHint = "rpt_custom_hint";
+  static const String rptNoData = "rpt_no_data";
+
+  // Settings / Account
+  static const String setGuestTitle = "set_guest_title";
+  static const String setGuestSubtitle = "set_guest_subtitle";
+  static const String setProtectTitle = "set_protect_title";
+  static const String setProtectDesc = "set_protect_desc";
+  static const String setLockedHint = "set_locked_hint";
+  static const String setEditProfile = "set_edit_profile";
+  static const String setPremiumTitle = "set_premium_title";
+  static const String setPremiumDesc = "set_premium_desc";
+  static const String setPremiumCta = "set_premium_cta";
+  static const String setNotifications = "set_notifications";
+  static const String setBackup = "set_backup";
+  static const String setBackupSynced = "set_backup_synced";
+  static const String setBackupSyncing = "set_backup_syncing";
+  static const String setExport = "set_export";
+  static const String setLanguage = "set_language";
+  static const String setTheme = "set_theme";
+  static const String setTerms = "set_terms";
+  static const String setLogout = "set_logout";
+  static const String setDelete = "set_delete";
+  static const String setLangVi = "set_lang_vi";
+  static const String setLangEn = "set_lang_en";
+  static const String setThemeLight = "set_theme_light";
+  static const String setThemeDark = "set_theme_dark";
+  static const String setThemeSystem = "set_theme_system";
+  static const String setThemeSystemDesc = "set_theme_system_desc";
+  static const String setChooseLanguage = "set_choose_language";
+  static const String setChooseTheme = "set_choose_theme";
+  static const String setLogoutConfirmTitle = "set_logout_confirm_title";
+  static const String setLogoutConfirmMsg = "set_logout_confirm_msg";
+  static const String setDeleteConfirmTitle = "set_delete_confirm_title";
+  static const String setDeleteConfirmMsg = "set_delete_confirm_msg";
+
+  // Backup & Sync screen
+  static const String bakStatusDone = "bak_status_done";
+  static const String bakLast = "bak_last";
+  static const String bakBackupNow = "bak_backup_now";
+  static const String bakStatTransactions = "bak_stat_transactions";
+  static const String bakStatVehicles = "bak_stat_vehicles";
+  static const String bakStatStorage = "bak_stat_storage";
+  static const String bakAutoSection = "bak_auto_section";
+  static const String bakAuto = "bak_auto";
+  static const String bakWifiOnly = "bak_wifi_only";
+  static const String bakFrequency = "bak_frequency";
+  static const String bakFreqDaily = "bak_freq_daily";
+  static const String bakFreqWeekly = "bak_freq_weekly";
+  static const String bakFreqMonthly = "bak_freq_monthly";
+  static const String bakChooseFrequency = "bak_choose_frequency";
+  static const String bakRestoreSection = "bak_restore_section";
+  static const String bakRestoreCta = "bak_restore_cta";
+  static const String bakRestoreDesc = "bak_restore_desc";
+  static const String bakRestoreConfirmTitle = "bak_restore_confirm_title";
+  static const String bakRestoreConfirmMsg = "bak_restore_confirm_msg";
+  static const String bakRestore = "bak_restore";
+  static const String bakBackingUp = "bak_backing_up";
+  static const String bakDone = "bak_done";
+
+  // Export data screen
+  static const String expRangeSection = "exp_range_section";
+  static const String expPresetThisMonth = "exp_preset_this_month";
+  static const String expPresetThisYear = "exp_preset_this_year";
+  static const String expPresetAll = "exp_preset_all";
+  static const String expFrom = "exp_from";
+  static const String expTo = "exp_to";
+  static const String expVehicleSection = "exp_vehicle_section";
+  static const String expAllVehicles = "exp_all_vehicles";
+  static const String expFormatSection = "exp_format_section";
+  static const String expFormatPdf = "exp_format_pdf";
+  static const String expFormatExcel = "exp_format_excel";
+  static const String expFormatCsv = "exp_format_csv";
+  static const String expEstimate = "exp_estimate";
+  static const String expExport = "exp_export";
+  static const String expShare = "exp_share";
+
+  // Premium / IAP screen
+  static const String iapPremiumSuffix = "iap_premium_suffix";
+  static const String iapFeature1 = "iap_feature_1";
+  static const String iapFeature2 = "iap_feature_2";
+  static const String iapFeature3 = "iap_feature_3";
+  static const String iapFeature4 = "iap_feature_4";
+  static const String iapFeature5 = "iap_feature_5";
+  static const String iapFeature6 = "iap_feature_6";
+  static const String iapFeature7 = "iap_feature_7";
+  static const String iapFeature8 = "iap_feature_8";
+  static const String iapPlanMonthly = "iap_plan_monthly";
+  static const String iapPlanYearly = "iap_plan_yearly";
+  static const String iapBadgeSave = "iap_badge_save";
+  static const String iapCta = "iap_cta";
+  static const String iapFooter = "iap_footer";
+
+  // Edit profile
+  static const String epChangePhoto = "ep_change_photo";
+  static const String epPhoneLocked = "ep_phone_locked";
+  static const String epSaved = "ep_saved";
+
+  // Forgot password
+  static const String fpTitle = "fp_title";
+  static const String fpSubtitle = "fp_subtitle";
+  static const String fpSubmit = "fp_submit";
+  static const String fpSent = "fp_sent";
+
+  // Terms & Privacy
+  static const String termsUpdated = "terms_updated";
+  static const String termsS1Title = "terms_s1_title";
+  static const String termsS1Body = "terms_s1_body";
+  static const String termsS2Title = "terms_s2_title";
+  static const String termsS2Body = "terms_s2_body";
+  static const String termsS3Title = "terms_s3_title";
+  static const String termsS3Body = "terms_s3_body";
+  static const String termsS4Title = "terms_s4_title";
+  static const String termsS4Body = "terms_s4_body";
+  static const String termsS5Title = "terms_s5_title";
+  static const String termsS5Body = "terms_s5_body";
+
   // Add-receipt bottom sheet & permissions
   static const String addReceiptTitle = "add_receipt_title";
   static const String addReceiptSubtitle = "add_receipt_subtitle";

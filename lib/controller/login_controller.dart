@@ -31,8 +31,7 @@ class LoginController extends GetxController {
   Future<void> continueWithGoogle() =>
       _run(_authRepository.continueWithGoogle);
 
-  // TODO: wire a password-recovery flow once the backend exists.
-  void forgotPassword() => _toast(AppStrings.forgotPassword.tr);
+  void forgotPassword() => Get.toNamed(AppRoutes.forgotPassword);
 
   /// Switch to the create-account screen (replaces this one in the stack).
   void goToRegister() => Get.offNamed(AppRoutes.register);

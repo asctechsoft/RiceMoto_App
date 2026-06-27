@@ -3,10 +3,10 @@ import "package:get/get.dart";
 import "package:ricemoto/controller/home_controller.dart";
 import "package:ricemoto/presentation/home/tabs/history_tab.dart";
 import "package:ricemoto/presentation/home/tabs/home_tab.dart";
-import "package:ricemoto/presentation/home/tabs/placeholder_tab.dart";
+import "package:ricemoto/presentation/home/tabs/report_tab.dart";
+import "package:ricemoto/presentation/home/tabs/settings_tab.dart";
 import "package:ricemoto/presentation/home/widgets/home_bottom_bar.dart";
 import "package:ricemoto/values/app_colors.dart";
-import "package:ricemoto/values/app_strings.dart";
 
 class HomeScreen extends GetView<HomeController> {
   const HomeScreen({super.key});
@@ -16,8 +16,8 @@ class HomeScreen extends GetView<HomeController> {
     final tabs = <Widget>[
       const HomeTab(),
       const HistoryTab(),
-      PlaceholderTab(title: AppStrings.tabReports.tr, icon: Icons.bar_chart_rounded),
-      PlaceholderTab(title: AppStrings.tabAccount.tr, icon: Icons.person_outline_rounded),
+      const ReportTab(),
+      const SettingsTab(),
     ];
 
     return Scaffold(

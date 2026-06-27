@@ -1,7 +1,13 @@
 import "package:get/get.dart";
 import "package:ricemoto/configs/app_routes.dart";
+import "package:ricemoto/controller/backup_controller.dart";
 import "package:ricemoto/controller/camera_scan_controller.dart";
+import "package:ricemoto/controller/edit_profile_controller.dart";
+import "package:ricemoto/controller/export_controller.dart";
+import "package:ricemoto/controller/forgot_password_controller.dart";
 import "package:ricemoto/controller/history_controller.dart";
+import "package:ricemoto/controller/premium_controller.dart";
+import "package:ricemoto/controller/settings_controller.dart";
 import "package:ricemoto/controller/home_controller.dart";
 import "package:ricemoto/controller/login_controller.dart";
 import "package:ricemoto/controller/onboarding_controller.dart";
@@ -10,10 +16,17 @@ import "package:ricemoto/controller/splash_controller.dart";
 import "package:ricemoto/controller/vehicle_setup_controller.dart";
 import "package:ricemoto/presentation/history/history_search_screen.dart";
 import "package:ricemoto/presentation/home/home_screen.dart";
+import "package:ricemoto/presentation/login/forgot_password_screen.dart";
 import "package:ricemoto/presentation/login/login_screen.dart";
 import "package:ricemoto/presentation/onboarding/onboarding_screen.dart";
 import "package:ricemoto/presentation/register/register_screen.dart";
 import "package:ricemoto/presentation/scan/camera_scan_screen.dart";
+import "package:ricemoto/presentation/settings/backup_sync_screen.dart";
+import "package:ricemoto/presentation/settings/edit_profile_screen.dart";
+import "package:ricemoto/presentation/settings/export_data_screen.dart";
+import "package:ricemoto/presentation/settings/premium_screen.dart";
+import "package:ricemoto/presentation/settings/terms_screen.dart";
+import "package:ricemoto/presentation/settings/theme_screen.dart";
 import "package:ricemoto/presentation/splash/splash_screen.dart";
 import "package:ricemoto/presentation/vehicle/vehicle_detail_screen.dart";
 import "package:ricemoto/presentation/vehicle/vehicle_setup_screen.dart";
@@ -101,6 +114,58 @@ class AppPages {
         if (!Get.isRegistered<HistoryController>()) {
           Get.lazyPut<HistoryController>(HistoryController.new);
         }
+      }),
+    ),
+    GetPage<dynamic>(
+      name: AppRoutes.backupSync,
+      page: () => const BackupSyncScreen(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<BackupController>(BackupController.new);
+      }),
+    ),
+    GetPage<dynamic>(
+      name: AppRoutes.exportData,
+      page: () => const ExportDataScreen(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<ExportController>(ExportController.new);
+      }),
+    ),
+    GetPage<dynamic>(
+      name: AppRoutes.premium,
+      page: () => const PremiumScreen(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<PremiumController>(PremiumController.new);
+      }),
+    ),
+    GetPage<dynamic>(
+      name: AppRoutes.theme,
+      page: () => const ThemeScreen(),
+      binding: BindingsBuilder(() {
+        // Normally already alive behind the Account tab; guard for deep links.
+        if (!Get.isRegistered<SettingsController>()) {
+          Get.lazyPut<SettingsController>(SettingsController.new);
+        }
+      }),
+    ),
+    GetPage<dynamic>(
+      name: AppRoutes.editProfile,
+      page: () => const EditProfileScreen(),
+      binding: BindingsBuilder(() {
+        if (!Get.isRegistered<SettingsController>()) {
+          Get.lazyPut<SettingsController>(SettingsController.new);
+        }
+        Get.lazyPut<EditProfileController>(EditProfileController.new);
+      }),
+    ),
+    GetPage<dynamic>(
+      name: AppRoutes.terms,
+      page: () => const TermsScreen(),
+    ),
+    GetPage<dynamic>(
+      name: AppRoutes.forgotPassword,
+      page: () => const ForgotPasswordScreen(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<ForgotPasswordController>(ForgotPasswordController.new);
       }),
     ),
   ];

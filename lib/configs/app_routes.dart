@@ -12,4 +12,11 @@ class AppRoutes {
   static const String cameraScan = "/camera-scan";
   static const String vehicleDetail = "/vehicle-detail";
   static const String historySearch = "/history-search";
+  static const String backupSync = "/backup-sync";
+  static const String exportData = "/export-data";
+  static const String premium = "/premium";
+  static const String theme = "/theme";
+  static const String editProfile = "/edit-profile";
+  static const String terms = "/terms";
+  static const String forgotPassword = "/forgot-password";
 }

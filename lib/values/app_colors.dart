@@ -31,6 +31,13 @@ class AppColors {
   static const Color guestBanner = Color(0xFFF5C84A);
   static const Color guestBannerText = Color(0xFF5A4500);
 
+  // Report / chart palette
+  static const Color chartFuel = Color(0xFF1B6E45); // Xăng — deep green
+  static const Color chartRepair = Color(0xFFE0A23A); // Sửa chữa — amber
+  static const Color chartSupplies = Color(0xFF4C90D9); // Vật tư — blue
+  static const Color chartAdmin = Color(0xFF9AA0A6); // Hành chính — grey
+  static const Color chartGrid = Color(0xFFEDEFF1);
+
   // Misc
   static const Color shadow = Color(0x1A000000);
   static const Color white = Color(0xFFFFFFFF);

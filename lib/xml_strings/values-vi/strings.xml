@@ -135,6 +135,156 @@
     <string name="record_now">Ghi ngay</string>
     <string name="currency_unit">đ</string>
 
+    <!-- Reports -->
+    <string name="rpt_period_month">Tháng</string>
+    <string name="rpt_period_quarter">Quý</string>
+    <string name="rpt_period_year">Năm</string>
+    <string name="rpt_period_custom">Tùy chỉnh</string>
+    <string name="rpt_total_month">Tổng chi tháng @value</string>
+    <string name="rpt_total_quarter">Tổng chi Q@quarter · @year</string>
+    <string name="rpt_total_year">Tổng chi năm @value</string>
+    <string name="rpt_total_custom">Tổng chi trong khoảng thời gian</string>
+    <string name="rpt_compare_month">so với tháng @value</string>
+    <string name="rpt_compare_quarter">so với Q@quarter · @year</string>
+    <string name="rpt_compare_year">so với năm @value</string>
+    <string name="rpt_compare_custom">so với kỳ trước</string>
+    <string name="rpt_quarter_months">(Tháng @from – @to)</string>
+    <string name="rpt_month_short">Tháng @value</string>
+    <string name="rpt_chart_by_week">Chi phí theo tuần</string>
+    <string name="rpt_chart_by_month">Chi phí theo tháng</string>
+    <string name="rpt_chart_compare_months">So sánh 3 tháng</string>
+    <string name="rpt_chart_by_quarter">Chi phí theo quý</string>
+    <string name="rpt_chart_by_period">Chi phí theo kỳ</string>
+    <string name="rpt_from">Từ ngày</string>
+    <string name="rpt_to">Đến ngày</string>
+    <string name="rpt_view_report">Xem báo cáo</string>
+    <string name="rpt_preset_7d">7 ngày</string>
+    <string name="rpt_preset_30d">30 ngày</string>
+    <string name="rpt_preset_3m">3 tháng</string>
+    <string name="rpt_preset_6m">6 tháng</string>
+    <string name="rpt_preset_1y">1 năm</string>
+    <string name="rpt_donut_total">Tổng @value</string>
+    <string name="rpt_efficiency_unit">km/lít</string>
+    <string name="rpt_top_title">Chi phí lớn nhất</string>
+    <string name="rpt_insight_peak_title">Tháng tốn nhất trong quý: @month · @amount</string>
+    <string name="rpt_insight_peak_sub">Chi phí @cat chiếm @pct% cả quý</string>
+    <string name="rpt_custom_hint">Chạm để chọn khoảng thời gian</string>
+    <string name="rpt_no_data">Chưa có dữ liệu cho kỳ này</string>
+
+    <!-- Settings / Account -->
+    <string name="set_guest_title">Chế độ khách</string>
+    <string name="set_guest_subtitle">Chưa đăng nhập</string>
+    <string name="set_protect_title">Bảo vệ dữ liệu của bạn</string>
+    <string name="set_protect_desc">Tạo tài khoản miễn phí để không mất dữ liệu khi đổi điện thoại</string>
+    <string name="set_locked_hint">Tạo tài khoản để mở khóa tính năng này</string>
+    <string name="set_edit_profile">Chỉnh sửa hồ sơ</string>
+    <string name="set_premium_title">Nâng cấp Premium</string>
+    <string name="set_premium_desc">Scan không giới hạn · Nhiều xe · Backup</string>
+    <string name="set_premium_cta">Xem gói</string>
+    <string name="set_notifications">Thông báo</string>
+    <string name="set_backup">Sao lưu &amp; Đồng bộ</string>
+    <string name="set_backup_synced">Vừa xong</string>
+    <string name="set_backup_syncing">Đang đồng bộ…</string>
+    <string name="set_export">Xuất dữ liệu</string>
+    <string name="set_language">Ngôn ngữ</string>
+    <string name="set_theme">Chủ đề</string>
+    <string name="set_terms">Điều khoản &amp; CSBT</string>
+    <string name="set_logout">Đăng xuất</string>
+    <string name="set_delete">Xóa tài khoản</string>
+    <string name="set_lang_vi">Tiếng Việt</string>
+    <string name="set_lang_en">English</string>
+    <string name="set_theme_light">Sáng</string>
+    <string name="set_theme_dark">Tối</string>
+    <string name="set_theme_system">Theo hệ thống</string>
+    <string name="set_theme_system_desc">Theo hệ thống sẽ chuyển theo cài đặt điện thoại</string>
+    <string name="set_choose_language">Chọn ngôn ngữ</string>
+    <string name="set_choose_theme">Chọn chủ đề</string>
+    <string name="set_logout_confirm_title">Đăng xuất?</string>
+    <string name="set_logout_confirm_msg">Bạn có chắc muốn đăng xuất khỏi tài khoản?</string>
+    <string name="set_delete_confirm_title">Xóa tài khoản?</string>
+    <string name="set_delete_confirm_msg">Hành động này không thể hoàn tác. Toàn bộ dữ liệu của bạn sẽ bị xóa vĩnh viễn.</string>
+
+    <!-- Backup & Sync screen -->
+    <string name="bak_status_done">Dữ liệu đã được sao lưu</string>
+    <string name="bak_last">Lần cuối: @value</string>
+    <string name="bak_backup_now">Backup ngay</string>
+    <string name="bak_stat_transactions">Giao dịch</string>
+    <string name="bak_stat_vehicles">Xe đã lưu</string>
+    <string name="bak_stat_storage">Dung lượng</string>
+    <string name="bak_auto_section">Tự động sao lưu</string>
+    <string name="bak_auto">Sao lưu tự động</string>
+    <string name="bak_wifi_only">Chỉ khi dùng WiFi</string>
+    <string name="bak_frequency">Tần suất</string>
+    <string name="bak_freq_daily">Hàng ngày</string>
+    <string name="bak_freq_weekly">Hàng tuần</string>
+    <string name="bak_freq_monthly">Hàng tháng</string>
+    <string name="bak_choose_frequency">Chọn tần suất</string>
+    <string name="bak_restore_section">Khôi phục dữ liệu</string>
+    <string name="bak_restore_cta">Khôi phục từ bản sao lưu</string>
+    <string name="bak_restore_desc">Thao tác này sẽ ghi đè dữ liệu hiện tại</string>
+    <string name="bak_restore_confirm_title">Khôi phục dữ liệu?</string>
+    <string name="bak_restore_confirm_msg">Dữ liệu hiện tại sẽ bị ghi đè bằng bản sao lưu. Bạn có chắc muốn tiếp tục?</string>
+    <string name="bak_restore">Khôi phục</string>
+    <string name="bak_backing_up">Đang sao lưu…</string>
+    <string name="bak_done">Đã sao lưu xong</string>
+
+    <!-- Export data screen -->
+    <string name="exp_range_section">Chọn khoảng thời gian</string>
+    <string name="exp_preset_this_month">Tháng này</string>
+    <string name="exp_preset_this_year">Năm nay</string>
+    <string name="exp_preset_all">Tất cả</string>
+    <string name="exp_from">Từ</string>
+    <string name="exp_to">Đến</string>
+    <string name="exp_vehicle_section">Chọn xe</string>
+    <string name="exp_all_vehicles">Tất cả xe</string>
+    <string name="exp_format_section">Định dạng xuất</string>
+    <string name="exp_format_pdf">PDF</string>
+    <string name="exp_format_excel">Excel (.xlsx)</string>
+    <string name="exp_format_csv">CSV</string>
+    <string name="exp_estimate">Ước tính: @count giao dịch · @size</string>
+    <string name="exp_export">Xuất dữ liệu</string>
+    <string name="exp_share">Chia sẻ ngay</string>
+
+    <!-- Premium / IAP screen -->
+    <string name="iap_premium_suffix">Premium</string>
+    <string name="iap_feature_1">Scan hóa đơn không giới hạn</string>
+    <string name="iap_feature_2">Quản lý nhiều xe</string>
+    <string name="iap_feature_3">Lịch sử không giới hạn</string>
+    <string name="iap_feature_4">Thống kê nâng cao + tư vấn</string>
+    <string name="iap_feature_5">Xuất báo cáo PDF/Excel</string>
+    <string name="iap_feature_6">Sao lưu &amp; đồng bộ đám mây</string>
+    <string name="iap_feature_7">Chia sẻ xe với gia đình</string>
+    <string name="iap_feature_8">Không quảng cáo</string>
+    <string name="iap_plan_monthly">Tháng</string>
+    <string name="iap_plan_yearly">Năm</string>
+    <string name="iap_badge_save">Tiết kiệm 17%</string>
+    <string name="iap_cta">Bắt đầu dùng Premium</string>
+    <string name="iap_footer">Tự động gia hạn · Hủy bất cứ lúc nào</string>
+
+    <!-- Edit profile -->
+    <string name="ep_change_photo">Đổi ảnh đại diện</string>
+    <string name="ep_phone_locked">Số điện thoại không thể thay đổi</string>
+    <string name="ep_saved">Đã lưu hồ sơ</string>
+
+    <!-- Forgot password -->
+    <string name="fp_title">Quên mật khẩu</string>
+    <string name="fp_subtitle">Nhập số điện thoại đã đăng ký, chúng tôi sẽ gửi mã đặt lại mật khẩu cho bạn.</string>
+    <string name="fp_submit">Gửi mã đặt lại</string>
+    <string name="fp_sent">Đã gửi mã đặt lại tới số điện thoại của bạn</string>
+
+    <!-- Terms & Privacy -->
+    <string name="terms_updated">Cập nhật lần cuối: @date</string>
+    <string name="terms_s1_title">1. Giới thiệu</string>
+    <string name="terms_s1_body">Chào mừng bạn đến với RiceMoto. Khi sử dụng ứng dụng, bạn đồng ý với các điều khoản dưới đây. Vui lòng đọc kỹ trước khi tiếp tục.</string>
+    <string name="terms_s2_title">2. Tài khoản</string>
+    <string name="terms_s2_body">Bạn chịu trách nhiệm bảo mật thông tin đăng nhập và mọi hoạt động phát sinh từ tài khoản của mình. Vui lòng thông báo cho chúng tôi nếu phát hiện truy cập trái phép.</string>
+    <string name="terms_s3_title">3. Quyền riêng tư &amp; Dữ liệu</string>
+    <string name="terms_s3_body">Dữ liệu chi phí, hóa đơn và thông tin xe của bạn được dùng để cung cấp dịch vụ và tính năng thống kê. Chúng tôi không bán dữ liệu cá nhân của bạn cho bên thứ ba.</string>
+    <string name="terms_s4_title">4. Thanh toán &amp; Premium</string>
+    <string name="terms_s4_body">Gói Premium được thanh toán qua cửa hàng ứng dụng và tự động gia hạn cho đến khi bạn hủy. Bạn có thể hủy bất cứ lúc nào trong phần cài đặt tài khoản của cửa hàng.</string>
+    <string name="terms_s5_title">5. Liên hệ</string>
+    <string name="terms_s5_body">Mọi thắc mắc về điều khoản hoặc quyền riêng tư, vui lòng liên hệ support@ricemoto.app.</string>
+
     <!-- Add-receipt sheet & permissions -->
     <string name="add_receipt_title">Thêm hóa đơn</string>
     <string name="add_receipt_subtitle">Chọn cách thêm chi phí của bạn</string>

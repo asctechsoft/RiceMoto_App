@@ -135,6 +135,157 @@
     <string name="record_now">Record now</string>
     <string name="currency_unit">đ</string>
 
+    <!-- Reports -->
+    <string name="rpt_period_month">Month</string>
+    <string name="rpt_period_quarter">Quarter</string>
+    <string name="rpt_period_year">Year</string>
+    <string name="rpt_period_custom">Custom</string>
+    <string name="rpt_total_month">Total spending · month @value</string>
+    <string name="rpt_total_quarter">Total spending · Q@quarter · @year</string>
+    <string name="rpt_total_year">Total spending · @value</string>
+    <string name="rpt_total_custom">Total spending · selected range</string>
+    <!-- (range fields/presets below) -->
+    <string name="rpt_compare_month">vs. month @value</string>
+    <string name="rpt_compare_quarter">vs. Q@quarter · @year</string>
+    <string name="rpt_compare_year">vs. @value</string>
+    <string name="rpt_compare_custom">vs. previous period</string>
+    <string name="rpt_quarter_months">(Months @from – @to)</string>
+    <string name="rpt_month_short">Month @value</string>
+    <string name="rpt_chart_by_week">Spending by week</string>
+    <string name="rpt_chart_by_month">Spending by month</string>
+    <string name="rpt_chart_compare_months">3-month comparison</string>
+    <string name="rpt_chart_by_quarter">Spending by quarter</string>
+    <string name="rpt_chart_by_period">Spending over range</string>
+    <string name="rpt_from">From</string>
+    <string name="rpt_to">To</string>
+    <string name="rpt_view_report">View report</string>
+    <string name="rpt_preset_7d">7 days</string>
+    <string name="rpt_preset_30d">30 days</string>
+    <string name="rpt_preset_3m">3 months</string>
+    <string name="rpt_preset_6m">6 months</string>
+    <string name="rpt_preset_1y">1 year</string>
+    <string name="rpt_donut_total">Total @value</string>
+    <string name="rpt_efficiency_unit">km/L</string>
+    <string name="rpt_top_title">Top expenses</string>
+    <string name="rpt_insight_peak_title">Highest month in quarter: @month · @amount</string>
+    <string name="rpt_insight_peak_sub">@cat made up @pct% of the quarter</string>
+    <string name="rpt_custom_hint">Tap to pick a date range</string>
+    <string name="rpt_no_data">No data for this period</string>
+
+    <!-- Settings / Account -->
+    <string name="set_guest_title">Guest mode</string>
+    <string name="set_guest_subtitle">Not signed in</string>
+    <string name="set_protect_title">Protect your data</string>
+    <string name="set_protect_desc">Create a free account so you never lose data when switching phones</string>
+    <string name="set_locked_hint">Create an account to unlock this feature</string>
+    <string name="set_edit_profile">Edit profile</string>
+    <string name="set_premium_title">Upgrade to Premium</string>
+    <string name="set_premium_desc">Unlimited scans · Multiple vehicles · Backup</string>
+    <string name="set_premium_cta">View plans</string>
+    <string name="set_notifications">Notifications</string>
+    <string name="set_backup">Backup &amp; Sync</string>
+    <string name="set_backup_synced">Just now</string>
+    <string name="set_backup_syncing">Syncing…</string>
+    <string name="set_export">Export data</string>
+    <string name="set_language">Language</string>
+    <string name="set_theme">Theme</string>
+    <string name="set_terms">Terms &amp; Privacy</string>
+    <string name="set_logout">Log out</string>
+    <string name="set_delete">Delete account</string>
+    <string name="set_lang_vi">Tiếng Việt</string>
+    <string name="set_lang_en">English</string>
+    <string name="set_theme_light">Light</string>
+    <string name="set_theme_dark">Dark</string>
+    <string name="set_theme_system">System</string>
+    <string name="set_theme_system_desc">Follows your phone's display setting</string>
+    <string name="set_choose_language">Choose language</string>
+    <string name="set_choose_theme">Choose theme</string>
+    <string name="set_logout_confirm_title">Log out?</string>
+    <string name="set_logout_confirm_msg">Are you sure you want to log out of your account?</string>
+    <string name="set_delete_confirm_title">Delete account?</string>
+    <string name="set_delete_confirm_msg">This action cannot be undone. All your data will be permanently deleted.</string>
+
+    <!-- Backup & Sync screen -->
+    <string name="bak_status_done">Your data is backed up</string>
+    <string name="bak_last">Last: @value</string>
+    <string name="bak_backup_now">Back up now</string>
+    <string name="bak_stat_transactions">Transactions</string>
+    <string name="bak_stat_vehicles">Vehicles saved</string>
+    <string name="bak_stat_storage">Storage</string>
+    <string name="bak_auto_section">Automatic backup</string>
+    <string name="bak_auto">Auto backup</string>
+    <string name="bak_wifi_only">Wi-Fi only</string>
+    <string name="bak_frequency">Frequency</string>
+    <string name="bak_freq_daily">Daily</string>
+    <string name="bak_freq_weekly">Weekly</string>
+    <string name="bak_freq_monthly">Monthly</string>
+    <string name="bak_choose_frequency">Choose frequency</string>
+    <string name="bak_restore_section">Restore data</string>
+    <string name="bak_restore_cta">Restore from backup</string>
+    <string name="bak_restore_desc">This will overwrite your current data</string>
+    <string name="bak_restore_confirm_title">Restore data?</string>
+    <string name="bak_restore_confirm_msg">Your current data will be overwritten with the backup. Continue?</string>
+    <string name="bak_restore">Restore</string>
+    <string name="bak_backing_up">Backing up…</string>
+    <string name="bak_done">Backup complete</string>
+
+    <!-- Export data screen -->
+    <string name="exp_range_section">Select time range</string>
+    <string name="exp_preset_this_month">This month</string>
+    <string name="exp_preset_this_year">This year</string>
+    <string name="exp_preset_all">All</string>
+    <string name="exp_from">From</string>
+    <string name="exp_to">To</string>
+    <string name="exp_vehicle_section">Select vehicles</string>
+    <string name="exp_all_vehicles">All vehicles</string>
+    <string name="exp_format_section">Export format</string>
+    <string name="exp_format_pdf">PDF</string>
+    <string name="exp_format_excel">Excel (.xlsx)</string>
+    <string name="exp_format_csv">CSV</string>
+    <string name="exp_estimate">Estimate: @count transactions · @size</string>
+    <string name="exp_export">Export data</string>
+    <string name="exp_share">Share now</string>
+
+    <!-- Premium / IAP screen -->
+    <string name="iap_premium_suffix">Premium</string>
+    <string name="iap_feature_1">Unlimited receipt scanning</string>
+    <string name="iap_feature_2">Manage multiple vehicles</string>
+    <string name="iap_feature_3">Unlimited history</string>
+    <string name="iap_feature_4">Advanced analytics + tips</string>
+    <string name="iap_feature_5">Export PDF/Excel reports</string>
+    <string name="iap_feature_6">Cloud backup &amp; sync</string>
+    <string name="iap_feature_7">Share vehicles with family</string>
+    <string name="iap_feature_8">No ads</string>
+    <string name="iap_plan_monthly">Monthly</string>
+    <string name="iap_plan_yearly">Yearly</string>
+    <string name="iap_badge_save">Save 17%</string>
+    <string name="iap_cta">Start Premium</string>
+    <string name="iap_footer">Auto-renews · Cancel anytime</string>
+
+    <!-- Edit profile -->
+    <string name="ep_change_photo">Change photo</string>
+    <string name="ep_phone_locked">Phone number can\'t be changed</string>
+    <string name="ep_saved">Profile saved</string>
+
+    <!-- Forgot password -->
+    <string name="fp_title">Forgot password</string>
+    <string name="fp_subtitle">Enter your registered phone number and we\'ll send you a reset code.</string>
+    <string name="fp_submit">Send reset code</string>
+    <string name="fp_sent">A reset code has been sent to your phone</string>
+
+    <!-- Terms & Privacy -->
+    <string name="terms_updated">Last updated: @date</string>
+    <string name="terms_s1_title">1. Introduction</string>
+    <string name="terms_s1_body">Welcome to RiceMoto. By using the app you agree to the terms below. Please read them carefully before continuing.</string>
+    <string name="terms_s2_title">2. Your account</string>
+    <string name="terms_s2_body">You are responsible for keeping your login details secure and for all activity on your account. Let us know if you notice any unauthorized access.</string>
+    <string name="terms_s3_title">3. Privacy &amp; Data</string>
+    <string name="terms_s3_body">Your expense, receipt and vehicle data are used to provide the service and analytics features. We do not sell your personal data to third parties.</string>
+    <string name="terms_s4_title">4. Payments &amp; Premium</string>
+    <string name="terms_s4_body">Premium is billed through the app store and renews automatically until cancelled. You can cancel anytime in your store account settings.</string>
+    <string name="terms_s5_title">5. Contact</string>
+    <string name="terms_s5_body">For any questions about these terms or your privacy, contact support@ricemoto.app.</string>
+
     <!-- Add-receipt sheet & permissions -->
     <string name="add_receipt_title">Add a receipt</string>
     <string name="add_receipt_subtitle">Choose how to add your expense</string>
