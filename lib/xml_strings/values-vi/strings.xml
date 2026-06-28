@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">RiceMoto</string>
+    <string name="app_name">Rice Moto</string>
 
     <!-- Onboarding -->
     <string name="onboard_title_1">Theo dõi mọi chi phí thông minh</string>

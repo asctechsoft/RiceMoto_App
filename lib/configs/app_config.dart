@@ -2,7 +2,7 @@
 class AppConfig {
   const AppConfig._();
 
-  static const String appName = "RiceMoto";
+  static const String appName = "Rice Moto";
 
   /// Root asset folder for this app's localization files.
   static const String localizationRoot = "lib/xml_strings";

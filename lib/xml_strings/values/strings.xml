@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">RiceMoto</string>
+    <string name="app_name">Rice Moto</string>
 
     <!-- Onboarding -->
     <string name="onboard_title_1">Track every ride expense smartly</string>
@@ -82,7 +82,7 @@
     <!-- Tabs -->
     <string name="tab_home">Home</string>
     <string name="tab_history">History</string>
-    <string name="tab_scan">Add</string>
+    <string name="tab_scan">Scan</string>
     <string name="tab_reports">Reports</string>
     <string name="tab_account">Account</string>
 

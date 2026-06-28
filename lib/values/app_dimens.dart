@@ -20,5 +20,5 @@ class AppDimens {
   static const double scanButtonSize = 58;
 
   // Convenience responsive getters.
-  static double get pagePadding => 20.w;
+  static double get pagePadding => 16.w;
 }
