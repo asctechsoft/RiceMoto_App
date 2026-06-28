@@ -48,8 +48,11 @@ class VehicleSetupController extends GetxController {
           plate: plateCtrl.text.trim(),
         ),
       );
+      // Reset before navigation — Get.offAllNamed disposes this controller,
+      // so any Rx update in a finally block would write to a disposed object.
+      isLoading.value = false;
       Get.offAllNamed(AppRoutes.home);
-    } finally {
+    } catch (_) {
       isLoading.value = false;
     }
   }
