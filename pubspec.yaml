@@ -20,8 +20,17 @@ dependencies:
   # Used by firebase_options.dart (real values via `flutterfire configure`)
   firebase_core: ^4.0.0
 
+  # Authentication: phone (SMS OTP) + Google sign-in via Firebase.
+  firebase_auth: ^6.0.0
+
   # State management & routing
   get: ^4.6.6
+
+  # HTTP client for the RideMoto backend API.
+  dio: ^5.7.0
+
+  # Runtime .env loader — reads app.env for local config (API host, etc.)
+  flutter_dotenv: ^5.2.1
 
   # Responsive sizing (design 360x800, same as dsp_base)
   flutter_screenutil: ^5.9.3
@@ -53,6 +62,7 @@ flutter:
     - lib/xml_strings/values-vi/
     - assets/images/
     - assets/logo/
+    - app.env
 
 # Generate launcher icons:  dart run flutter_launcher_icons
 flutter_launcher_icons:

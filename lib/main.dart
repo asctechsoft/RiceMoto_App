@@ -3,12 +3,17 @@ import "package:dsp_base/comm_app.dart";
 import "package:dsp_base/convenience_imports.dart";
 import "package:firebase_core/firebase_core.dart";
 import "package:flutter/material.dart";
+import "package:flutter_dotenv/flutter_dotenv.dart";
 import "package:ricemoto/configs/app_config.dart";
 import "package:ricemoto/configs/app_pages.dart";
 import "package:ricemoto/configs/app_theme.dart";
 import "package:ricemoto/firebase_options.dart";
 
 Future<void> main() async {
+  // Load local environment config (API_HOST, API_PORT) from app.env.
+  // Silently skipped if the file is missing (emulator / CI defaults apply).
+  await dotenv.load(fileName: "app.env", mergeWith: {}).catchError((_) {});
+
   // commRunApp() replaces runApp(): it boots SharedPrefs, device
   // classification, localization and (when configured) Firebase/Crashlytics.
   await commRunApp(

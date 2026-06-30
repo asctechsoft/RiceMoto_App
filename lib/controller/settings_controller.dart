@@ -1,4 +1,5 @@
 import "package:dsp_base/app_localize.dart";
+import "package:firebase_auth/firebase_auth.dart";
 import "package:flutter/material.dart";
 import "package:get/get.dart";
 import "package:ricemoto/configs/app_routes.dart";
@@ -113,6 +114,12 @@ class SettingsController extends GetxController {
       );
 
   Future<void> _signOut() async {
+    try {
+      await FirebaseAuth.instance.signOut();
+    } catch (_) {
+      // Firebase not configured on this platform — clear local state anyway.
+    }
+    await StorageService.clearTokens();
     await StorageService.setLoggedIn(false);
     Get.offAllNamed(AppRoutes.welcome);
   }

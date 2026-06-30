@@ -1,6 +1,13 @@
 {
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "figma"
   ],
-  "enableAllProjectMcpServers": true
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -m 5 -o /dev/null -w \"localhost:3000/v1 -> %{http_code}\\\\n\" http://localhost:3000/v1)",
+      "Bash(curl -s -m 5 -o /dev/null -w \"192.168.1.10:3000/v1 -> %{http_code}\\\\n\" http://192.168.1.10:3000/v1)",
+      "Bash(ipconfig)"
+    ]
+  }
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  DEBUG ONLY — allows plain http:// to any host so the app can reach the
+  local backend (API_HOST in app.env) without listing specific IPs.
+  This file overrides the main/res/xml/network_security_config.xml for
+  debug builds via Android resource merging.
+  Release builds use the main config which enforces HTTPS.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true"/>
+</network-security-config>

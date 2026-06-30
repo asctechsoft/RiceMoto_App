@@ -10,6 +10,8 @@ class StorageService {
   static const String _kOnboardingSeen = "ricemoto_onboarding_seen";
   static const String _kLoggedIn = "ricemoto_logged_in";
   static const String _kVehicle = "ricemoto_vehicle";
+  static const String _kToken = "ricemoto_token";
+  static const String _kRefreshToken = "ricemoto_refresh_token";
 
   static bool get onboardingSeen => PrefAssist.getBoolean(_kOnboardingSeen);
 
@@ -32,4 +34,26 @@ class StorageService {
 
   static Future<void> setVehicle(VehicleModel value) =>
       PrefAssist.setString(_kVehicle, jsonEncode(value.toJson()));
+
+  // --- Backend session (JWT) -------------------------------------------------
+
+  /// The backend access token (app JWT), empty when signed out.
+  static String get token => PrefAssist.getString(_kToken);
+
+  static String get refreshToken => PrefAssist.getString(_kRefreshToken);
+
+  static bool get hasToken => token.isNotEmpty;
+
+  static Future<void> setTokens({
+    required String token,
+    required String refreshToken,
+  }) async {
+    await PrefAssist.setString(_kToken, token);
+    await PrefAssist.setString(_kRefreshToken, refreshToken);
+  }
+
+  static Future<void> clearTokens() async {
+    await PrefAssist.setString(_kToken, "");
+    await PrefAssist.setString(_kRefreshToken, "");
+  }
 }

@@ -7,6 +7,8 @@
 # Secrets / Firebase (keep out of version control)
 android/debug_keystore.properties
 
+# app.env is committed with a default IP — update locally, see app.env.example
+
 # Android build artifacts
 android/build/
 android/.gradle/

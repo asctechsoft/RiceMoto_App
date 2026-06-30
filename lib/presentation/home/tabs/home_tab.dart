@@ -385,20 +385,20 @@ class _EmptyState extends StatelessWidget {
     return Column(
       children: <Widget>[
         SizedBox(height: 8.h),
-        Container(
-          width: 150.w,
-          height: 150.w,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: AppColors.primary.withValues(alpha: 0.06),
-            border: Border.all(
-              color: AppColors.primary.withValues(alpha: 0.15),
-              width: 1.5,
-            ),
-          ),
-          child: Icon(Icons.two_wheeler_rounded,
-              size: 64.w, color: AppColors.primary),
-        ),
+        // Container(
+        //   width: 150.w,
+        //   height: 150.w,
+        //   decoration: BoxDecoration(
+        //     shape: BoxShape.circle,
+        //     color: AppColors.primary.withValues(alpha: 0.06),
+        //     border: Border.all(
+        //       color: AppColors.primary.withValues(alpha: 0.15),
+        //       width: 1.5,
+        //     ),
+        //   ),
+        //   child: Icon(Icons.two_wheeler_rounded,
+        //       size: 64.w, color: AppColors.primary),
+        // ),
         SizedBox(height: 20.h),
         Text(AppStrings.noDataTitle.tr, style: AppTextStyles.title),
         SizedBox(height: 6.h),
@@ -406,8 +406,8 @@ class _EmptyState extends StatelessWidget {
           AppStrings.noDataSubtitle.tr,
           style: AppTextStyles.body.copyWith(color: AppColors.textSecondary),
         ),
-        SizedBox(height: 20.h),
-        PrimaryButton(label: AppStrings.recordNow.tr, onPressed: onRecord),
+        // SizedBox(height: 20.h),
+        // PrimaryButton(label: AppStrings.recordNow.tr, onPressed: onRecord),
       ],
     );
   }

@@ -11,6 +11,7 @@ import "package:ricemoto/controller/settings_controller.dart";
 import "package:ricemoto/controller/home_controller.dart";
 import "package:ricemoto/controller/login_controller.dart";
 import "package:ricemoto/controller/onboarding_controller.dart";
+import "package:ricemoto/controller/otp_verify_controller.dart";
 import "package:ricemoto/controller/register_controller.dart";
 import "package:ricemoto/controller/splash_controller.dart";
 import "package:ricemoto/controller/vehicle_setup_controller.dart";
@@ -18,6 +19,7 @@ import "package:ricemoto/presentation/history/history_search_screen.dart";
 import "package:ricemoto/presentation/home/home_screen.dart";
 import "package:ricemoto/presentation/login/forgot_password_screen.dart";
 import "package:ricemoto/presentation/login/login_screen.dart";
+import "package:ricemoto/presentation/login/otp_verify_screen.dart";
 import "package:ricemoto/presentation/onboarding/onboarding_screen.dart";
 import "package:ricemoto/presentation/register/register_screen.dart";
 import "package:ricemoto/presentation/scan/camera_scan_screen.dart";
@@ -33,6 +35,7 @@ import "package:ricemoto/presentation/vehicle/vehicle_setup_screen.dart";
 import "package:ricemoto/presentation/report/fuel_category_detail_screen.dart";
 import "package:ricemoto/presentation/welcome/welcome_screen.dart";
 import "package:ricemoto/repository/auth_repository.dart";
+import "package:ricemoto/repository/vehicle_repository.dart";
 
 /// GetX page table + per-page dependency bindings.
 class AppPages {
@@ -82,10 +85,23 @@ class AppPages {
       }),
     ),
     GetPage<dynamic>(
+      name: AppRoutes.otpVerify,
+      page: () => const OtpVerifyScreen(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<AuthRepository>(AuthRepository.new);
+        Get.lazyPut<OtpVerifyController>(
+          () => OtpVerifyController(Get.find<AuthRepository>()),
+        );
+      }),
+    ),
+    GetPage<dynamic>(
       name: AppRoutes.vehicleSetup,
       page: () => const VehicleSetupScreen(),
       binding: BindingsBuilder(() {
-        Get.lazyPut<VehicleSetupController>(VehicleSetupController.new);
+        Get.lazyPut<VehicleRepository>(VehicleRepository.new);
+        Get.lazyPut<VehicleSetupController>(
+          () => VehicleSetupController(Get.find<VehicleRepository>()),
+        );
       }),
     ),
     GetPage<dynamic>(

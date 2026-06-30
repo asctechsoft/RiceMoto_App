@@ -47,6 +47,24 @@
     <string name="no_account_yet">Chưa có tài khoản?</string>
     <string name="create_now">Tạo ngay</string>
 
+    <!-- Auth - phone OTP verification -->
+    <string name="otp_title">Mã xác minh</string>
+    <string name="otp_subtitle">Nhập mã 6 số đã gửi đến</string>
+    <string name="otp_verify">Xác minh</string>
+    <string name="otp_resend">Gửi lại mã</string>
+    <string name="otp_resend_in">Gửi lại sau</string>
+    <string name="otp_invalid">Vui lòng nhập đủ 6 số</string>
+    <string name="otp_wrong">Mã không đúng, vui lòng thử lại</string>
+    <string name="otp_resent">Đã gửi lại mã mới</string>
+    <string name="auth_failed">Xác thực thất bại, vui lòng thử lại</string>
+    <string name="phone_invalid">Vui lòng nhập số điện thoại hợp lệ</string>
+
+    <!-- Networking / API errors -->
+    <string name="err_timeout">Hết thời gian kết nối máy chủ</string>
+    <string name="err_no_connection">Không kết nối được máy chủ. Backend đã chạy chưa?</string>
+    <string name="err_generic">Đã có lỗi xảy ra, vui lòng thử lại</string>
+    <string name="err_session">Phiên đăng nhập đã hết hạn, vui lòng đăng nhập lại</string>
+
     <!-- Vehicle setup -->
     <string name="add_vehicle_title">Thêm xe của bạn</string>
     <string name="add_vehicle_subtitle">Chỉ cần vài thông tin cơ bản để bắt đầu theo dõi chi phí.</string>

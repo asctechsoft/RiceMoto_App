@@ -52,6 +52,24 @@ class AppStrings {
   static const String noAccountYet = "no_account_yet";
   static const String createNow = "create_now";
 
+  // Auth — phone OTP verification
+  static const String otpTitle = "otp_title";
+  static const String otpSubtitle = "otp_subtitle";
+  static const String otpVerify = "otp_verify";
+  static const String otpResend = "otp_resend";
+  static const String otpResendIn = "otp_resend_in";
+  static const String otpInvalid = "otp_invalid";
+  static const String otpWrong = "otp_wrong";
+  static const String otpResent = "otp_resent";
+  static const String authFailed = "auth_failed";
+  static const String phoneInvalid = "phone_invalid";
+
+  // Networking / API errors
+  static const String errTimeout = "err_timeout";
+  static const String errNoConnection = "err_no_connection";
+  static const String errGeneric = "err_generic";
+  static const String errSession = "err_session";
+
   // Vehicle setup
   static const String addVehicleTitle = "add_vehicle_title";
   static const String addVehicleSubtitle = "add_vehicle_subtitle";

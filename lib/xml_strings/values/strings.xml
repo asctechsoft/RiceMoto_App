@@ -47,6 +47,24 @@
     <string name="no_account_yet">Don\'t have an account?</string>
     <string name="create_now">Create now</string>
 
+    <!-- Auth - phone OTP verification -->
+    <string name="otp_title">Verification code</string>
+    <string name="otp_subtitle">Enter the 6-digit code sent to</string>
+    <string name="otp_verify">Verify</string>
+    <string name="otp_resend">Resend code</string>
+    <string name="otp_resend_in">Resend in</string>
+    <string name="otp_invalid">Please enter the 6-digit code</string>
+    <string name="otp_wrong">Incorrect code, please try again</string>
+    <string name="otp_resent">A new code has been sent</string>
+    <string name="auth_failed">Authentication failed, please try again</string>
+    <string name="phone_invalid">Please enter a valid phone number</string>
+
+    <!-- Networking / API errors -->
+    <string name="err_timeout">Server connection timed out</string>
+    <string name="err_no_connection">Cannot reach the server. Is the backend running?</string>
+    <string name="err_generic">Something went wrong, please try again</string>
+    <string name="err_session">Your session has expired, please sign in again</string>
+
     <!-- Vehicle setup -->
     <string name="add_vehicle_title">Add your motorcycle</string>
     <string name="add_vehicle_subtitle">Just a few basics to start tracking your costs.</string>

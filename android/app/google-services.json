@@ -12,7 +12,20 @@
           "package_name": "com.company.ricemoto"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "810964655230-qjtr6120a353gmb1t2vt0un5ohjlb1hd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.company.ricemoto",
+            "certificate_hash": "f6f3daab1aed72ee87edfea2956a2cbdb7818972"
+          }
+        },
+        {
+          "client_id": "810964655230-mp9suiubsj2jjkubt6om9f1m3vrp2vub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCDXhCrisj6OvV1bN54O3NzczaT6Htu0Vo"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "810964655230-mp9suiubsj2jjkubt6om9f1m3vrp2vub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
