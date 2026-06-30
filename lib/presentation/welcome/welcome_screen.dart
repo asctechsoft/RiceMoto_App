@@ -3,6 +3,7 @@ import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:get/get.dart";
 import "package:ricemoto/configs/app_routes.dart";
 import "package:ricemoto/presentation/widgets/illustration_frame.dart";
+import "package:ricemoto/presentation/widgets/language_switcher.dart";
 import "package:ricemoto/presentation/widgets/primary_button.dart";
 import "package:ricemoto/values/app_assets.dart";
 import "package:ricemoto/values/app_colors.dart";
@@ -30,7 +31,14 @@ class WelcomeScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 24.w),
           child: Column(
             children: <Widget>[
-              SizedBox(height: 16.h),
+              Align(
+                alignment: Alignment.centerRight,
+                child: Padding(
+                  padding: EdgeInsets.only(top: 8.h, bottom: 4.h),
+                  child: const LanguageSwitcher(),
+                ),
+              ),
+              SizedBox(height: 8.h),
               Expanded(
                 child: Center(
                   child: const IllustrationFrame(

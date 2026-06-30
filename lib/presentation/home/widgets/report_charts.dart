@@ -41,6 +41,7 @@ class ReportBarChart extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 170.h,
+      width: double.infinity,
       child: CustomPaint(
         size: Size.infinite,
         painter: _BarChartPainter(

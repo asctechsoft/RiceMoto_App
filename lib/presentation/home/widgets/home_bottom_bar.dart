@@ -26,7 +26,7 @@ class HomeBottomBar extends StatelessWidget {
       child: SafeArea(
         top: false,
         child: SizedBox(
-          height: 64.h,
+          height: 72.h,
           child: Row(
             children: <Widget>[
               _NavItem(controller: controller, index: 0, icon: Icons.home_rounded, labelKey: AppStrings.tabHome),
@@ -100,8 +100,8 @@ class _ScanButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                width: 52.w,
-                height: 52.w,
+                width: 48.r,
+                height: 48.r,
                 decoration: BoxDecoration(
                   color: AppColors.primary,
                   shape: BoxShape.circle,
@@ -113,7 +113,7 @@ class _ScanButton extends StatelessWidget {
                     ),
                   ],
                 ),
-                child: Icon(Icons.photo_camera_rounded, color: AppColors.white, size: 26.w),
+                child: Icon(Icons.photo_camera_rounded, color: AppColors.white, size: 24.r),
               ),
               SizedBox(height: 2.h),
               Text(

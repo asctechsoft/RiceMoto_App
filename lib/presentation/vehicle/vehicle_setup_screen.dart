@@ -3,9 +3,7 @@ import "package:flutter/services.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:get/get.dart";
 import "package:ricemoto/controller/vehicle_setup_controller.dart";
-import "package:ricemoto/presentation/widgets/illustration_frame.dart";
 import "package:ricemoto/presentation/widgets/primary_button.dart";
-import "package:ricemoto/values/app_assets.dart";
 import "package:ricemoto/values/app_colors.dart";
 import "package:ricemoto/values/app_strings.dart";
 import "package:ricemoto/values/app_text_styles.dart";
@@ -22,11 +20,7 @@ class VehicleSetupScreen extends GetView<VehicleSetupController> {
           padding: EdgeInsets.fromLTRB(24.w, 8.h, 24.w, 24.h),
           child: Column(
             children: <Widget>[
-              const IllustrationFrame(
-                image: AppAssets.welcome,
-                icon: Icons.motorcycle,
-                aspectRatio: 1.5,
-              ),
+              const _SetupHeader(),
               SizedBox(height: 16.h),
               Text(
                 AppStrings.addVehicleTitle.tr,
@@ -183,6 +177,37 @@ class _Input extends StatelessWidget {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12.r),
           borderSide: const BorderSide(color: AppColors.primary, width: 1.4),
+        ),
+      ),
+    );
+  }
+}
+
+/// Simple illustration header for the vehicle-setup form.
+/// Uses a fixed height and no AspectRatio so it never crashes in
+/// unbounded-height scroll contexts.
+class _SetupHeader extends StatelessWidget {
+  const _SetupHeader();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      height: 180.h,
+      decoration: BoxDecoration(
+        color: AppColors.primary.withValues(alpha: 0.04),
+        borderRadius: BorderRadius.circular(24.r),
+        border: Border.all(color: AppColors.primary.withValues(alpha: 0.12)),
+      ),
+      child: Center(
+        child: Container(
+          width: 88.w,
+          height: 88.w,
+          decoration: BoxDecoration(
+            color: AppColors.primary.withValues(alpha: 0.10),
+            shape: BoxShape.circle,
+          ),
+          child: Icon(Icons.motorcycle, size: 48.w, color: AppColors.primary),
         ),
       ),
     );

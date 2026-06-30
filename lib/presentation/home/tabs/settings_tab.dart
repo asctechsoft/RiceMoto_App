@@ -97,19 +97,31 @@ class _Profile extends StatelessWidget {
           child: Icon(Icons.person_rounded, size: 46.w, color: tint),
         ),
         SizedBox(height: 12.h),
-        Obx(
-          () => Text(
-            guest ? AppStrings.setGuestTitle.tr : controller.fullName.value,
+        if (guest)
+          Text(
+            AppStrings.setGuestTitle.tr,
             style: AppTextStyles.title.copyWith(fontWeight: FontWeight.w700),
+          )
+        else
+          Obx(
+            () => Text(
+              controller.fullName.value,
+              style: AppTextStyles.title.copyWith(fontWeight: FontWeight.w700),
+            ),
           ),
-        ),
         SizedBox(height: 3.h),
-        Obx(
-          () => Text(
-            guest ? AppStrings.setGuestSubtitle.tr : controller.phoneNumber.value,
+        if (guest)
+          Text(
+            AppStrings.setGuestSubtitle.tr,
             style: AppTextStyles.body.copyWith(color: AppColors.textSecondary),
+          )
+        else
+          Obx(
+            () => Text(
+              controller.phoneNumber.value,
+              style: AppTextStyles.body.copyWith(color: AppColors.textSecondary),
+            ),
           ),
-        ),
         if (!guest) ...<Widget>[
           SizedBox(height: 8.h),
           GestureDetector(

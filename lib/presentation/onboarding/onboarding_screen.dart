@@ -4,6 +4,7 @@ import "package:get/get.dart";
 import "package:ricemoto/controller/onboarding_controller.dart";
 import "package:ricemoto/models/onboarding_item.dart";
 import "package:ricemoto/presentation/widgets/illustration_frame.dart";
+import "package:ricemoto/presentation/widgets/language_switcher.dart";
 import "package:ricemoto/presentation/widgets/primary_button.dart";
 import "package:ricemoto/values/app_colors.dart";
 import "package:ricemoto/values/app_strings.dart";
@@ -19,7 +20,7 @@ class OnboardingScreen extends GetView<OnboardingController> {
       body: SafeArea(
         child: Column(
           children: <Widget>[
-            _SkipButton(controller: controller),
+            _TopBar(controller: controller),
             Expanded(
               child: PageView.builder(
                 controller: controller.pageController,
@@ -53,37 +54,40 @@ class OnboardingScreen extends GetView<OnboardingController> {
   }
 }
 
-class _SkipButton extends StatelessWidget {
-  const _SkipButton({required this.controller});
+class _TopBar extends StatelessWidget {
+  const _TopBar({required this.controller});
 
   final OnboardingController controller;
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.centerRight,
-      child: Padding(
-        padding: EdgeInsets.only(right: 16.w, top: 8.h),
-        child: Obx(
-          () => AnimatedOpacity(
-            opacity: controller.isLastPage ? 0.0 : 1.0,
-            duration: const Duration(milliseconds: 200),
-            child: TextButton(
-              onPressed: controller.isLastPage ? null : controller.skip,
-              style: TextButton.styleFrom(
-                foregroundColor: AppColors.textSecondary,
-                padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
-              ),
-              child: Text(
-                AppStrings.skip.tr,
-                style: AppTextStyles.body.copyWith(
-                  color: AppColors.textSecondary,
-                  fontWeight: FontWeight.w600,
+    return Padding(
+      padding: EdgeInsets.only(left: 16.w, right: 8.w, top: 8.h),
+      child: Row(
+        children: <Widget>[
+          const LanguageSwitcher(),
+          const Spacer(),
+          Obx(
+            () => AnimatedOpacity(
+              opacity: controller.isLastPage ? 0.0 : 1.0,
+              duration: const Duration(milliseconds: 200),
+              child: TextButton(
+                onPressed: controller.isLastPage ? null : controller.skip,
+                style: TextButton.styleFrom(
+                  foregroundColor: AppColors.textSecondary,
+                  padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
+                ),
+                child: Text(
+                  AppStrings.skip.tr,
+                  style: AppTextStyles.body.copyWith(
+                    color: AppColors.textSecondary,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }
