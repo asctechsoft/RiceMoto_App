@@ -30,6 +30,7 @@ import "package:ricemoto/presentation/settings/theme_screen.dart";
 import "package:ricemoto/presentation/splash/splash_screen.dart";
 import "package:ricemoto/presentation/vehicle/vehicle_detail_screen.dart";
 import "package:ricemoto/presentation/vehicle/vehicle_setup_screen.dart";
+import "package:ricemoto/presentation/report/fuel_category_detail_screen.dart";
 import "package:ricemoto/presentation/welcome/welcome_screen.dart";
 import "package:ricemoto/repository/auth_repository.dart";
 
@@ -167,6 +168,10 @@ class AppPages {
       binding: BindingsBuilder(() {
         Get.lazyPut<ForgotPasswordController>(ForgotPasswordController.new);
       }),
+    ),
+    GetPage<dynamic>(
+      name: AppRoutes.fuelCategoryDetail,
+      page: () => const FuelCategoryDetailScreen(),
     ),
   ];
 }

@@ -290,6 +290,17 @@ class AppStrings {
   static const String termsS5Title = "terms_s5_title";
   static const String termsS5Body = "terms_s5_body";
 
+  // Fuel category detail
+  static const String fdTotalCost = "fd_total_cost";
+  static const String fdTotalLiters = "fd_total_liters";
+  static const String fdFillCount = "fd_fill_count";
+  static const String fdEfficiencyTitle = "fd_efficiency_title";
+  static const String fdBestFillup = "fd_best_fillup";
+  static const String fdWorstFillup = "fd_worst_fillup";
+  static const String fdAllFillups = "fd_all_fillups";
+  static const String fdAvgLabel = "fd_avg_label";
+  static const String fdTimesUnit = "fd_times_unit";
+
   // Add-receipt bottom sheet & permissions
   static const String addReceiptTitle = "add_receipt_title";
   static const String addReceiptSubtitle = "add_receipt_subtitle";

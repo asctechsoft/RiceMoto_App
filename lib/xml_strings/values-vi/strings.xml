@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">RiceMoto</string>
+    <string name="app_name">Rice Moto</string>
 
     <!-- Onboarding -->
     <string name="onboard_title_1">Theo dõi mọi chi phí thông minh</string>
@@ -284,6 +284,17 @@
     <string name="terms_s4_body">Gói Premium được thanh toán qua cửa hàng ứng dụng và tự động gia hạn cho đến khi bạn hủy. Bạn có thể hủy bất cứ lúc nào trong phần cài đặt tài khoản của cửa hàng.</string>
     <string name="terms_s5_title">5. Liên hệ</string>
     <string name="terms_s5_body">Mọi thắc mắc về điều khoản hoặc quyền riêng tư, vui lòng liên hệ support@ricemoto.app.</string>
+
+    <!-- Fuel category detail -->
+    <string name="fd_total_cost">Tổng chi</string>
+    <string name="fd_total_liters">Tổng lít</string>
+    <string name="fd_fill_count">Số lần đổ</string>
+    <string name="fd_efficiency_title">Hiệu suất km/lít</string>
+    <string name="fd_best_fillup">Lần đổ tốt nhất</string>
+    <string name="fd_worst_fillup">Lần đổ kém nhất</string>
+    <string name="fd_all_fillups">Tất cả lần đổ xăng</string>
+    <string name="fd_avg_label">TB</string>
+    <string name="fd_times_unit">lần</string>
 
     <!-- Add-receipt sheet & permissions -->
     <string name="add_receipt_title">Thêm hóa đơn</string>

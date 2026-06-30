@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:get/get.dart";
+import "package:ricemoto/configs/app_routes.dart";
 import "package:ricemoto/controller/report_controller.dart";
 import "package:ricemoto/models/report_model.dart";
 import "package:ricemoto/presentation/home/widgets/expense_history_list.dart";
@@ -587,8 +588,16 @@ class _CategoryGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<_CategoryCellData> cells = <_CategoryCellData>[
-      _CategoryCellData(AppStrings.histFilterFuel, Icons.local_gas_station_rounded,
-          AppColors.chartFuel, data.fuel, data.percentOf(data.fuel)),
+      _CategoryCellData(
+        AppStrings.histFilterFuel, Icons.local_gas_station_rounded,
+        AppColors.chartFuel, data.fuel, data.percentOf(data.fuel),
+        onTap: () {
+          final ReportController ctrl = Get.find<ReportController>();
+          final String title =
+              "${AppStrings.histFilterFuel.tr} · ${ctrl.periodLabel}";
+          Get.toNamed(AppRoutes.fuelCategoryDetail, arguments: title);
+        },
+      ),
       _CategoryCellData(AppStrings.histFilterRepair, Icons.build_rounded,
           AppColors.chartRepair, data.repair, data.percentOf(data.repair)),
       _CategoryCellData(AppStrings.histFilterSupplies, Icons.inventory_2_rounded,
@@ -621,13 +630,15 @@ class _CategoryGrid extends StatelessWidget {
 
 class _CategoryCellData {
   const _CategoryCellData(
-      this.labelKey, this.icon, this.color, this.amount, this.percent);
+      this.labelKey, this.icon, this.color, this.amount, this.percent,
+      {this.onTap});
 
   final String labelKey;
   final IconData icon;
   final Color color;
   final int amount;
   final int percent;
+  final VoidCallback? onTap;
 }
 
 class _CategoryCell extends StatelessWidget {
@@ -637,7 +648,9 @@ class _CategoryCell extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return GestureDetector(
+      onTap: data.onTap,
+      child: Container(
       padding: EdgeInsets.fromLTRB(12.w, 12.h, 12.w, 12.h),
       decoration: BoxDecoration(
         color: AppColors.surface,
@@ -692,6 +705,7 @@ class _CategoryCell extends StatelessWidget {
             ),
           ),
         ],
+      ),
       ),
     );
   }

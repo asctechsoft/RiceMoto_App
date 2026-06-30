@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">RiceMoto</string>
+    <string name="app_name">Rice Moto</string>
 
     <!-- Onboarding -->
     <string name="onboard_title_1">Track every ride expense smartly</string>
@@ -82,7 +82,7 @@
     <!-- Tabs -->
     <string name="tab_home">Home</string>
     <string name="tab_history">History</string>
-    <string name="tab_scan">Add</string>
+    <string name="tab_scan">Scan</string>
     <string name="tab_reports">Reports</string>
     <string name="tab_account">Account</string>
 
@@ -285,6 +285,17 @@
     <string name="terms_s4_body">Premium is billed through the app store and renews automatically until cancelled. You can cancel anytime in your store account settings.</string>
     <string name="terms_s5_title">5. Contact</string>
     <string name="terms_s5_body">For any questions about these terms or your privacy, contact support@ricemoto.app.</string>
+
+    <!-- Fuel category detail -->
+    <string name="fd_total_cost">Total cost</string>
+    <string name="fd_total_liters">Total liters</string>
+    <string name="fd_fill_count">Fill-ups</string>
+    <string name="fd_efficiency_title">km/L efficiency</string>
+    <string name="fd_best_fillup">Best fill-up</string>
+    <string name="fd_worst_fillup">Worst fill-up</string>
+    <string name="fd_all_fillups">All fuel fill-ups</string>
+    <string name="fd_avg_label">Avg</string>
+    <string name="fd_times_unit">times</string>
 
     <!-- Add-receipt sheet & permissions -->
     <string name="add_receipt_title">Add a receipt</string>

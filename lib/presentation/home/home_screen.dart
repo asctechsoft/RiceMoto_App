@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:get/get.dart";
 import "package:ricemoto/controller/home_controller.dart";
 import "package:ricemoto/presentation/home/tabs/history_tab.dart";
@@ -13,7 +14,7 @@ class HomeScreen extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    final tabs = <Widget>[
+    final List<Widget> tabs = <Widget>[
       const HomeTab(),
       const HistoryTab(),
       const ReportTab(),
@@ -28,7 +29,27 @@ class HomeScreen extends GetView<HomeController> {
           children: tabs,
         ),
       ),
+      floatingActionButton: _ScanFab(onPressed: controller.onScanPressed),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: HomeBottomBar(controller: controller),
+    );
+  }
+}
+
+class _ScanFab extends StatelessWidget {
+  const _ScanFab({required this.onPressed});
+
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return FloatingActionButton(
+      onPressed: onPressed,
+      backgroundColor: AppColors.primary,
+      foregroundColor: AppColors.white,
+      elevation: 4,
+      shape: const CircleBorder(),
+      child: Icon(Icons.photo_camera_rounded, size: 28.w),
     );
   }
 }

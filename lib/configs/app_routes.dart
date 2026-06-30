@@ -19,4 +19,5 @@ class AppRoutes {
   static const String editProfile = "/edit-profile";
   static const String terms = "/terms";
   static const String forgotPassword = "/forgot-password";
+  static const String fuelCategoryDetail = "/fuel-category-detail";
 }
